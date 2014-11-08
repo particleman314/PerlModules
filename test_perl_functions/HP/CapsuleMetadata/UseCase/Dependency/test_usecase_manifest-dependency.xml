@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dependencies> 
+   <ooflow ooTag="OO9">
+      <artifact type="DELIVERY" path="local" value="oo9-csa-solutions-cp-5_00.jar"/>
+      <artifact type="OOTB" value="oo9-base-cp-1.0.121"/>
+      <artifact type="OOTB" value="oo9-cloud-cp-1.0.116"/>
+   </ooflow>
+   <ooflow ooTag="OO10">
+      <artifact type="DELIVERY" path="local" value="com.hp.csl.vmware.vcenter" version="5.00"/>
+      <artifact type="DELIVERY" path="local" value="com.hp.csl.sa" version="5.00"/>
+      <artifact type="DELIVERY" path="local" value="com.hp.csl.dma" version="5.00"/>
+      <artifact type="OOTB" value="oo10-base-cp-1.0.121"/>
+      <artifact type="OOTB" value="oo10-cloud-cp-1.0.116"/>
+      <artifact type="OOTB" value="oo10-hp-solutions-cp-1.0.117"/>
+      <artifact type="OOTB" value="oo10-virtualization-cp-1.0.111"/>
+      <artifact type="OOTB" value="oo10-sa-cp-1.0.1"/>
+      <artifact type="OOTB" value="CSA-CP-1.0.0" />
+   </ooflow>
+</dependencies>

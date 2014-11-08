@@ -1,0 +1,6 @@
+	   <provider name="com.hp.csa" displayName="Cloud Service Automation" mandatory="true">
+	   <!-- The attribute "mandatory" represents the minimal requirement for the contents to be installed (only install phase). If this attribute is not present, default is false -->
+		  <version comparison="equals" value="3.20" />
+		  <version comparison="equals" value="4.00" />
+		  <version comparison="equals" value="4.10" />
+	   </provider>

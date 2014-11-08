@@ -1,0 +1,11 @@
+<sample>
+   <bounds id="0000000-000">
+      <annotation>This is a test</annotation>
+      <x>50</x>
+	  <y>42</y>
+   </bounds>
+   <story>
+      <name>Frozen</name>
+	  <year>2013</year>
+   </story>
+</sample>

@@ -1,0 +1,3601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root version="14" libraryDocVersion="17">
+  <node type="flow" id="fb3b32c7-bc22-4e01-9a67-5973eb066731">
+    <attribute name="annotation"></attribute>
+    <attribute name="categories">
+      <collection type="set"/>
+    </attribute>
+    <attribute name="checkPointFlow">true</attribute>
+    <attribute name="compatibleRuntimeContext">false</attribute>
+    <attribute name="defaultContent">false</attribute>
+    <attribute name="dharmaParentUuid">a548ec6f-1584-4822-a559-0c499d547b67</attribute>
+    <attribute name="dharmaVersion">
+      <node type="version">
+        <attribute name="derivation">|c85688ff-891f-43bb-ad9b-8d6f7dc2ab82#1.0|8b9bdd82-4bc5-4350-ae36-ea1223d73bb3#2.0|c85688ff-891f-43bb-ad9b-8d6f7dc2ab82#3.0</attribute>
+        <child name="revisions">
+          <collection ordered="true" type="list">
+            <node type="revision">
+              <attribute name="checkoutModificationNum">0</attribute>
+              <attribute name="commitUuid">94d7495d-0694-4339-9da6-cf3fb5d3d27d</attribute>
+              <attribute name="modificationNum">3</attribute>
+              <attribute name="respositoryId">c85688ff-891f-43bb-ad9b-8d6f7dc2ab82</attribute>
+            </node>
+          </collection>
+        </child>
+      </node>
+    </attribute>
+    <attribute name="hidden">false</attribute>
+    <attribute name="historyCheckPointFlow">true</attribute>
+    <attribute name="last_modified_by">admin</attribute>
+    <attribute name="modifiedTimestamp">1380551382835</attribute>
+    <attribute name="name">DMA Get Job Status</attribute>
+    <attribute name="uuid">fb3b32c7-bc22-4e01-9a67-5973eb066731</attribute>
+    <attribute name="version">0</attribute>
+    <attribute name="visibleMask">55</attribute>
+    <child name="accessControlList">
+      <collection type="list">
+        <node type="groupPermissions" id="25da1b6d-579e-4c5d-a9c3-eb9f9d7e4e92">
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1380556309212</attribute>
+          <attribute name="perm">15</attribute>
+          <attribute name="uuid">25da1b6d-579e-4c5d-a9c3-eb9f9d7e4e92</attribute>
+          <child name="role">
+            <ref pathref="8924098d-92bb-4823-8ef9-756623917ce1"/>
+          </child>
+        </node>
+      </collection>
+    </child>
+    <child name="availableResultExpressions">
+      <collection type="list"/>
+    </child>
+    <child name="callouts">
+      <collection type="list"/>
+    </child>
+    <child name="iconSpec">
+      <node type="icon-spec" id="174e6839-96ef-4868-ad7c-872ba6ece195">
+        <attribute name="base-icon">change.png</attribute>
+        <attribute name="base-path">/Integrations/</attribute>
+        <attribute name="last_modified_by">admin</attribute>
+        <attribute name="layers">
+          <collection type="list">
+            <node type="icon-spec" id="c755d624-0e1b-4a99-914c-e62fb7f08a25">
+              <attribute name="base-icon">fix3.png</attribute>
+              <attribute name="base-path">/Annotations/</attribute>
+              <attribute name="last_modified_by">admin</attribute>
+              <attribute name="layers">
+                <collection type="list"/>
+              </attribute>
+              <attribute name="modifiedTimestamp">1340244885530</attribute>
+              <attribute name="read-only">false</attribute>
+              <attribute name="uuid">c755d624-0e1b-4a99-914c-e62fb7f08a25</attribute>
+            </node>
+          </collection>
+        </attribute>
+        <attribute name="modifiedTimestamp">1339147396687</attribute>
+        <attribute name="read-only">false</attribute>
+        <attribute name="uuid">174e6839-96ef-4868-ad7c-872ba6ece195</attribute>
+      </node>
+    </child>
+    <child name="inputs">
+      <collection type="list">
+        <node type="userInputBinding" id="b0cadd3e-32f9-4f82-b5c7-0b4e2769d7fa">
+          <attribute name="annotation"></attribute>
+          <attribute name="assignFromContext">true</attribute>
+          <attribute name="assignToContext">true</attribute>
+          <attribute name="inputSymbol">location</attribute>
+          <attribute name="inputType">String</attribute>
+          <attribute name="isList">false</attribute>
+          <attribute name="isMultiSelect">false</attribute>
+          <attribute name="isPersisted">true</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="listDelimiter">,</attribute>
+          <attribute name="modifiedTimestamp">1339159230718</attribute>
+          <attribute name="record">false</attribute>
+          <attribute name="required">true</attribute>
+          <attribute name="uuid">b0cadd3e-32f9-4f82-b5c7-0b4e2769d7fa</attribute>
+        </node>
+        <node type="userInputBinding" id="e8e7959f-e059-422c-b431-d0d006f9be2c">
+          <attribute name="annotation"></attribute>
+          <attribute name="assignFromContext">true</attribute>
+          <attribute name="assignToContext">true</attribute>
+          <attribute name="inputSymbol">coreUsername</attribute>
+          <attribute name="inputType">String</attribute>
+          <attribute name="isList">false</attribute>
+          <attribute name="isMultiSelect">false</attribute>
+          <attribute name="isPersisted">true</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="listDelimiter">,</attribute>
+          <attribute name="modifiedTimestamp">1339162576069</attribute>
+          <attribute name="record">false</attribute>
+          <attribute name="required">true</attribute>
+          <attribute name="uuid">e8e7959f-e059-422c-b431-d0d006f9be2c</attribute>
+        </node>
+        <node type="userInputBinding" id="fa3442b9-7536-40bf-9917-c78c453d68f3">
+          <attribute name="annotation"></attribute>
+          <attribute name="assignFromContext">true</attribute>
+          <attribute name="assignToContext">true</attribute>
+          <attribute name="inputSymbol">corePassword</attribute>
+          <attribute name="inputType">String</attribute>
+          <attribute name="isList">false</attribute>
+          <attribute name="isMultiSelect">false</attribute>
+          <attribute name="isPersisted">true</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="listDelimiter">,</attribute>
+          <attribute name="modifiedTimestamp">1339162578007</attribute>
+          <attribute name="record">false</attribute>
+          <attribute name="required">true</attribute>
+          <attribute name="uuid">fa3442b9-7536-40bf-9917-c78c453d68f3</attribute>
+        </node>
+      </collection>
+    </child>
+    <child name="possibleResponses">
+      <collection type="list">
+        <node type="opResponse" id="ebba29e2-8002-4058-b6a9-a370e1eb1ef2">
+          <attribute name="annotation"></attribute>
+          <attribute name="isDefault">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339147608599</attribute>
+          <attribute name="name">failure</attribute>
+          <attribute name="onFailure">true</attribute>
+          <attribute name="type">ERROR</attribute>
+          <attribute name="uuid">ebba29e2-8002-4058-b6a9-a370e1eb1ef2</attribute>
+        </node>
+        <node type="opResponse" id="b7a4a738-165b-4c7d-b320-5d2bb11df378">
+          <attribute name="annotation"></attribute>
+          <attribute name="isDefault">true</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158097022</attribute>
+          <attribute name="name">success</attribute>
+          <attribute name="onFailure">false</attribute>
+          <attribute name="type">RESOLVED</attribute>
+          <attribute name="uuid">b7a4a738-165b-4c7d-b320-5d2bb11df378</attribute>
+        </node>
+      </collection>
+    </child>
+    <child name="resultExpression">
+      <node type="expression" id="6c01e675-3852-47f9-8f60-9373ec24f529">
+        <attribute name="annotation"></attribute>
+        <attribute name="field-name">FailureMessage</attribute>
+        <attribute name="last_modified_by">admin</attribute>
+        <attribute name="modifiedTimestamp">1339147406494</attribute>
+        <attribute name="name">FailureMessage</attribute>
+        <attribute name="source-type">RAWRESULT</attribute>
+        <attribute name="uuid">6c01e675-3852-47f9-8f60-9373ec24f529</attribute>
+      </node>
+    </child>
+    <child name="scriptlet">
+      <node type="scriptlet" id="891abb79-e814-47ba-a72e-9bf1999a00aa">
+        <attribute name="annotation"></attribute>
+        <attribute name="defaultContent">false</attribute>
+        <attribute name="last_modified_by">admin</attribute>
+        <attribute name="modifiedTimestamp">1339147620447</attribute>
+        <attribute name="name">Operation:DMA Get Job Status (fb3b32c7-bc22-4e01-9a67-5973eb066731)</attribute>
+        <attribute name="type">RHINO</attribute>
+        <attribute name="uuid">891abb79-e814-47ba-a72e-9bf1999a00aa</attribute>
+        <child name="accessControlList">
+          <collection type="list"/>
+        </child>
+      </node>
+    </child>
+    <child name="startSteps">
+      <collection type="list">
+        <ref idref="0ea704a5-172b-4fc6-94f9-fb59b18be749"/>
+      </collection>
+    </child>
+    <child name="steps">
+      <collection type="set">
+        <node type="step" id="523e38fb-4dd6-403b-aa58-cc6317c57731">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;Takes a reference to XML (in the form of a String) and the specified XPath Query is run against the XML and returns the results in a form of a delimited list. The World Wide Web Consortium (W3C) organization provides the XPath specification (http://www.w3.org).
+
+Inputs:
+xml - The XML (in the form of a String)
+
+xpathQuery - The XPath Query that is wanted to be run. See Examples in Notes section below.
+
+delimiter- The delimiter used to separate values in the returnResult list. 
+
+Default value: ,
+
+Result Value:
+returnResult - The result of the operation. If multiple XPaths are defined then this will add the delimiter between each value. There is no final delimiter.
+
+Notes:
+Examples:
+The XPath Query can be specified as a single query in a format similiar to the following:
+/employees/employee[@id="3"]/*[name()="name" or name()="jobDescription" or name()="salary" or name()="managerId"]/text()
+
+This would return the following results:
+Goofy,tester,$50,1
+
+Or if more then one XPath query needs to be specified, populate xpathQuery using the XPath concat function.  As an example here is sample of a xpathQuery value using XPath concat function:
+concat(/employees/employee[@id="2"]/name/text(),',',/employees/employee[@id="2"]/jobDescription/text(),',',/employees/employee[@id="2"]/managerId/text(),',',/employees/employee[@id="2"]/salary/text())
+
+The output using the concat xpathQuery input would return the following results:
+Donald Duck,Lead Coder,1,$50
+
+The examples above use the following xml string value:
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;employees&gt;
+  &lt;employee id="1"&gt;
+    &lt;name&gt;Mickey Mouse&lt;/name&gt;
+    &lt;jobDescription&gt;Chief&lt;/jobDescription&gt;
+    &lt;salary&gt;$100&lt;/salary&gt;
+    &lt;managerId/&gt;
+  &lt;/employee&gt;
+  &lt;employee id="2"&gt;
+    &lt;name&gt;Donald Duck&lt;/name&gt;
+    &lt;jobDescription&gt;Lead Coder&lt;/jobDescription&gt;
+    &lt;salary&gt;$50&lt;/salary&gt;
+    &lt;managerId&gt;1&lt;/managerId&gt;
+  &lt;/employee&gt;
+  &lt;employee id="3"&gt;
+    &lt;name&gt;Goofy&lt;/name&gt;
+    &lt;jobDescription&gt;tester&lt;/jobDescription&gt;
+    &lt;salary&gt;$50&lt;/salary&gt;
+    &lt;managerId&gt;1&lt;/managerId&gt;
+  &lt;/employee&gt;
+  &lt;employee id="4"&gt;
+    &lt;name&gt;Pluto&lt;/name&gt;
+    &lt;jobDescription&gt;Coder - grade 1&lt;/jobDescription&gt;
+    &lt;salary&gt;$25&lt;/salary&gt;
+    &lt;managerId&gt;2&lt;/managerId&gt;
+  &lt;/employee&gt;
+&lt;/employees&gt;
+
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1336499796970</attribute>
+          <attribute name="name">XPath Query</attribute>
+          <attribute name="opRef">
+            <ref id="96d3702b-0a2c-437d-b389-c93e6b0d99d6"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">523e38fb-4dd6-403b-aa58-cc6317c57731</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;269.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;28.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list">
+              <node type="flow-variable-assignment" id="799a936d-d4e5-4a00-8a2f-345b10a9d4ed">
+                <attribute name="action">OVERWRITE</attribute>
+                <attribute name="annotation"></attribute>
+                <attribute name="assignment-target-type">Flow Variable</attribute>
+                <attribute name="context-key">workflowStatus</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="modifiedTimestamp">1336499887581</attribute>
+                <attribute name="name">assignment</attribute>
+                <attribute name="uuid">799a936d-d4e5-4a00-8a2f-345b10a9d4ed</attribute>
+                <child name="expression">
+                  <node type="expression" id="5f890287-546a-4710-a95d-1315fa3ce486">
+                    <attribute name="annotation"></attribute>
+                    <attribute name="field-name">returnResult</attribute>
+                    <attribute name="last_modified_by">admin</attribute>
+                    <attribute name="modifiedTimestamp">1336499894740</attribute>
+                    <attribute name="name">Result Field: returnResult</attribute>
+                    <attribute name="source-type">RAWRESULT</attribute>
+                    <attribute name="uuid">5f890287-546a-4710-a95d-1315fa3ce486</attribute>
+                    <child name="filters">
+                      <collection type="list">
+                        <node type="strip-trailing-filter" id="ac591068-3232-4a86-8a07-bb2baccd1356">
+                          <attribute name="annotation"></attribute>
+                          <attribute name="defaultContent">false</attribute>
+                          <attribute name="last_modified_by">admin</attribute>
+                          <attribute name="modifiedTimestamp">1339156627752</attribute>
+                          <attribute name="name">Strip</attribute>
+                          <attribute name="strip">state="</attribute>
+                          <attribute name="type">All Characters Up To And Including</attribute>
+                          <attribute name="uuid">ac591068-3232-4a86-8a07-bb2baccd1356</attribute>
+                          <child name="accessControlList">
+                            <collection type="list"/>
+                          </child>
+                        </node>
+                        <node type="strip-trailing-filter" id="7dea847e-b4b6-444a-802e-042d66366224">
+                          <attribute name="annotation"></attribute>
+                          <attribute name="defaultContent">false</attribute>
+                          <attribute name="last_modified_by">admin</attribute>
+                          <attribute name="modifiedTimestamp">1339156701564</attribute>
+                          <attribute name="name">Strip</attribute>
+                          <attribute name="strip">"</attribute>
+                          <attribute name="type">All Characters After And Including</attribute>
+                          <attribute name="uuid">7dea847e-b4b6-444a-802e-042d66366224</attribute>
+                          <child name="accessControlList">
+                            <collection type="list"/>
+                          </child>
+                        </node>
+                      </collection>
+                    </child>
+                  </node>
+                </child>
+              </node>
+            </collection>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="userInputBinding" id="4b4560bc-2f86-4eef-99d3-403d27ba439e">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">workflowXml</attribute>
+                <attribute name="inputSymbol">xml</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339159493084</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">4b4560bc-2f86-4eef-99d3-403d27ba439e</attribute>
+              </node>
+              <node type="staticBinding" id="e3249524-5599-487c-8135-6b7c3db45c9d">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">xpathQuery</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1336499843005</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">e3249524-5599-487c-8135-6b7c3db45c9d</attribute>
+                <attribute name="value">//*[name()='feed']/*[name()='sop:status']/@state</attribute>
+              </node>
+              <node type="staticBinding" id="f4d58e33-4c46-4277-ba98-7a6778c63223">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">delimiter</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1340611355452</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">f4d58e33-4c46-4277-ba98-7a6778c63223</attribute>
+                <attribute name="value"></attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="aacde389-541a-4072-9c05-2bec685dda37">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339147610954</attribute>
+                <attribute name="name">failure</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">aacde389-541a-4072-9c05-2bec685dda37</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;106.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;88.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;101.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;198.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="523e38fb-4dd6-403b-aa58-cc6317c57731"/>
+                </child>
+              </node>
+              <node type="transition" id="bf9b12b0-aab0-45f4-b08b-80449271b004">
+                <attribute name="annotation">DMA Workflow Status [${workflowStatus}]</attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158230286</attribute>
+                <attribute name="name">success</attribute>
+                <attribute name="responseSymbol">success</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">bf9b12b0-aab0-45f4-b08b-80449271b004</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;316.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;79.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;440.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;88.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="6d239fdf-b93e-4437-adb4-a9a0d2ff8126"/>
+                </child>
+                <child name="source">
+                  <ref idref="523e38fb-4dd6-403b-aa58-cc6317c57731"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="6d239fdf-b93e-4437-adb4-a9a0d2ff8126" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;
+Compares two strings, returning a true response if and only if they contain the same sequence of characters. A null string is considered to be equal to an empty string.
+
+Inputs:
+string1 - The first string.
+string2 - The second string.
+ignoreCase - If set to 'true', then the comparison ignores case considerations. The two strings are considered equal ignoring case if they are of the same length and corresponding characters in the two strings are equal ignoring case. If set to any value other than 'true', then the strings must match exactly to be considered equal.
+
+responses:
+true - If the two strings are equal
+false - If the two strings are not equal
+
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158219999</attribute>
+          <attribute name="name">Is Running?</attribute>
+          <attribute name="opRef">
+            <ref id="7c2f47aa-a4b3-4a7d-b3d4-007f285f7d29"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">6d239fdf-b93e-4437-adb4-a9a0d2ff8126</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;385.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;28.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="userInputBinding" id="29178aef-2dc3-425f-84fb-371dfc3b7be1">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">workflowStatus</attribute>
+                <attribute name="inputSymbol">string1</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158219999</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">29178aef-2dc3-425f-84fb-371dfc3b7be1</attribute>
+              </node>
+              <node type="staticBinding" id="af11ecb9-5ba3-4d63-a112-12d43a7ead8b">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">string2</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158249344</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">af11ecb9-5ba3-4d63-a112-12d43a7ead8b</attribute>
+                <attribute name="value">Running</attribute>
+              </node>
+              <node type="staticBinding" id="37259ed5-7c45-4410-8dde-a8d811a9d6fb">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">ignoreCase</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158269104</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">37259ed5-7c45-4410-8dde-a8d811a9d6fb</attribute>
+                <attribute name="value">true</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="ab60efe2-8674-46ec-89c7-4cd462b2a829">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158405533</attribute>
+                <attribute name="name">true</attribute>
+                <attribute name="responseSymbol">true</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">ab60efe2-8674-46ec-89c7-4cd462b2a829</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;436.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;83.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;570.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;83.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="cdadc8a0-3349-489a-854c-6238065a0827"/>
+                </child>
+                <child name="source">
+                  <ref idref="6d239fdf-b93e-4437-adb4-a9a0d2ff8126"/>
+                </child>
+              </node>
+              <node type="transition" id="0b8fdaa8-9a89-490b-b555-2f92d8eb2c6d">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158727439</attribute>
+                <attribute name="name">false</attribute>
+                <attribute name="responseSymbol">false</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">0b8fdaa8-9a89-490b-b555-2f92d8eb2c6d</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;306.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;75.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;315.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;180.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="8a12308a-4861-4d06-b299-27ad15d269f3"/>
+                </child>
+                <child name="source">
+                  <ref idref="6d239fdf-b93e-4437-adb4-a9a0d2ff8126"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node type="step" id="c72f931f-e1c2-41ad-8bbc-f37dff8ae744">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation"></attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158097022</attribute>
+          <attribute name="name">Resolved : success</attribute>
+          <attribute name="opRef">
+            <ref id="86c33fac-7b62-49f5-bf0b-1011e90ca256"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">c72f931f-e1c2-41ad-8bbc-f37dff8ae744</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;518.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;168.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list"/>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="9b7dbe09-9004-4e88-9b14-59cc13b59e2b">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158097092</attribute>
+                <attribute name="name">return</attribute>
+                <attribute name="responseSymbol">success</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">9b7dbe09-9004-4e88-9b14-59cc13b59e2b</attribute>
+                <attribute name="viewAttributes"></attribute>
+                <child name="destination">
+                  <ref idref="c72f931f-e1c2-41ad-8bbc-f37dff8ae744"/>
+                </child>
+                <child name="source">
+                  <ref idref="c72f931f-e1c2-41ad-8bbc-f37dff8ae744"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node type="step" id="efe2a479-f000-463f-8f9c-6fb279f90b14">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">Counts from one number to another number.
+
+&lt;pre&gt;
+Inputs:
+from - The number to start counting at.
+to - The number to count to.
+incrementBy - The number to increment by while counting. If unspecified this is 1. If you wanted to count 2,4,6,8 this would be 2.
+reset - If true, then the counter will restart counting from the beginning.
+
+NOTE: These values must be between -9223372036854775808 and 9223372036854775807
+
+Returns:
+The number that was just counted.
+
+Note: the primary result is resultString, Result can also be used. result (All lower case) should not be used as it is the response code.
+
+Responses:
+has more - Not yet done counting.
+no more - Done counting. This will only be returned once, then counting restarts.
+failure - Something went wrong.
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158499418</attribute>
+          <attribute name="name">Counter</attribute>
+          <attribute name="opRef">
+            <ref id="c62eeb58-f329-4ae3-b336-54bdc5c9f3d6"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">efe2a479-f000-463f-8f9c-6fb279f90b14</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;631.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;28.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="staticBinding" id="1d2a71e3-8d4f-48fd-b8df-b58c0d241051">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">from</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158558302</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">1d2a71e3-8d4f-48fd-b8df-b58c0d241051</attribute>
+                <attribute name="value">1</attribute>
+              </node>
+              <node type="staticBinding" id="31ea9b18-d0e5-491a-a6d1-790f641d8090">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">dmaWorkflowTimeout</attribute>
+                <attribute name="inputSymbol">to</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158573457</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">31ea9b18-d0e5-491a-a6d1-790f641d8090</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="2f3994c6-32a8-45d3-b1e1-f2222f4bae43">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">incrementBy</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158499442</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">2f3994c6-32a8-45d3-b1e1-f2222f4bae43</attribute>
+                <attribute name="value">1</attribute>
+              </node>
+              <node type="staticBinding" id="4a5492bd-3814-4bb8-9128-42461257d8d3">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">reset</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158499465</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">4a5492bd-3814-4bb8-9128-42461257d8d3</attribute>
+                <attribute name="value">false</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="f97f1c5c-5bd7-49b5-a363-52ecc71d9f81">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158667730</attribute>
+                <attribute name="name">has more</attribute>
+                <attribute name="responseSymbol">has more</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">f97f1c5c-5bd7-49b5-a363-52ecc71d9f81</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;676.5&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;63.931677018633536&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;508.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;16.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;397.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;9.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;196.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;78.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="183e3f1a-adaf-49b9-9478-6733efee22ef"/>
+                </child>
+                <child name="source">
+                  <ref idref="efe2a479-f000-463f-8f9c-6fb279f90b14"/>
+                </child>
+              </node>
+              <node type="transition" id="b0156e7a-8b09-4cd2-b04c-b2d61983046c">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158855135</attribute>
+                <attribute name="name">failure</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">b0156e7a-8b09-4cd2-b04c-b2d61983046c</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;548.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;79.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;550.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;174.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="a1ee11f5-f3cd-4c32-b5fe-87acbf90c1ce"/>
+                </child>
+                <child name="source">
+                  <ref idref="efe2a479-f000-463f-8f9c-6fb279f90b14"/>
+                </child>
+              </node>
+              <node type="transition" id="945baa63-5153-46e5-a092-e35ac856a25e">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158857354</attribute>
+                <attribute name="name">no more</attribute>
+                <attribute name="responseSymbol">no more</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">945baa63-5153-46e5-a092-e35ac856a25e</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;656.7741935483871&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;94.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;711.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;131.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;683.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;218.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="a1ee11f5-f3cd-4c32-b5fe-87acbf90c1ce"/>
+                </child>
+                <child name="source">
+                  <ref idref="efe2a479-f000-463f-8f9c-6fb279f90b14"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node type="step" id="dabac635-950e-42d7-90b2-4d35159a14b2">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation"></attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339161221806</attribute>
+          <attribute name="name">Error : failure</attribute>
+          <attribute name="opRef">
+            <ref id="86c33fac-7b62-49f5-bf0b-1011e90ca258"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">dabac635-950e-42d7-90b2-4d35159a14b2</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;11.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;128.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list"/>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="43dd2f42-7769-48ca-a420-d8db0fe851b1">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339161221806</attribute>
+                <attribute name="name">return</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">43dd2f42-7769-48ca-a420-d8db0fe851b1</attribute>
+                <attribute name="viewAttributes"></attribute>
+                <child name="destination">
+                  <ref idref="dabac635-950e-42d7-90b2-4d35159a14b2"/>
+                </child>
+                <child name="source">
+                  <ref idref="dabac635-950e-42d7-90b2-4d35159a14b2"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation"></attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339147608598</attribute>
+          <attribute name="name">Error : failure</attribute>
+          <attribute name="opRef">
+            <ref id="86c33fac-7b62-49f5-bf0b-1011e90ca258"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">4fab34e7-6015-4bc1-a52b-8f42f4b6c87a</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;267.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;173.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list"/>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="a453f5d8-64d9-43d6-8d6f-a095f4682a3e">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339147608682</attribute>
+                <attribute name="name">return</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">a453f5d8-64d9-43d6-8d6f-a095f4682a3e</attribute>
+                <attribute name="viewAttributes"></attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="0ea704a5-172b-4fc6-94f9-fb59b18be749" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;Performs a mathematical operation on two numbers or strings
+
+Inputs:
+value1 - The first value.
+value2 - The second value.
+operation - The operation to perform (+ - * ^ / &gt; &lt; == != &gt;= &lt;=).
+
+Responses:
+success -  The operation completed successfully. If a boolean operation, it evaluated to true.
+failure - Something went wrong or the boolean operation returned false.
+
+Returns:
+The raw result of the operation, for boolean values this is true or false.
+
+Returns:
+Field 1 - The first value. Here for compatibility
+Field 2 - The second value. Here for compatibility
+Field 3 - The operation. Here for compatibility
+formatted_result - The formatted result of the operation, for boolean values this is true or false.&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1311181703258</attribute>
+          <attribute name="name">Divider</attribute>
+          <attribute name="opRef">
+            <ref id="e783215e-da3f-44e7-a11b-2313dbfef9d7"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">0ea704a5-172b-4fc6-94f9-fb59b18be749</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;14.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;29.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list">
+              <node type="flow-variable-assignment" id="63f9be6d-9c81-4bbf-98e8-72d617ec671e">
+                <attribute name="action">OVERWRITE</attribute>
+                <attribute name="annotation"></attribute>
+                <attribute name="assignment-target-type">Flow Variable</attribute>
+                <attribute name="context-key">dmaWorkflowTimeout</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="modifiedTimestamp">1311181768790</attribute>
+                <attribute name="name">assignment</attribute>
+                <attribute name="uuid">63f9be6d-9c81-4bbf-98e8-72d617ec671e</attribute>
+                <child name="expression">
+                  <node type="expression" id="d6222bb2-60de-4458-8484-3074f00a008a">
+                    <attribute name="annotation"></attribute>
+                    <attribute name="field-name">result</attribute>
+                    <attribute name="last_modified_by">admin</attribute>
+                    <attribute name="modifiedTimestamp">1311181768789</attribute>
+                    <attribute name="name">Result Field: result</attribute>
+                    <attribute name="source-type">RAWRESULT</attribute>
+                    <attribute name="uuid">d6222bb2-60de-4458-8484-3074f00a008a</attribute>
+                    <child name="filters">
+                      <collection type="list"/>
+                    </child>
+                  </node>
+                </child>
+              </node>
+            </collection>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="userInputBinding" id="479099a1-84f3-4174-9a2f-61782718a3e4">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">CSA_DMA_WorkflowTimeout</attribute>
+                <attribute name="inputSymbol">value1</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1311181703258</attribute>
+                <attribute name="prompt">Enter a value for value1</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">479099a1-84f3-4174-9a2f-61782718a3e4</attribute>
+                <child name="validationFormat">
+                  <ref pathref="f915b29a-9092-4e32-a889-2387d355c9f4"/>
+                </child>
+              </node>
+              <node type="staticBinding" id="70071097-b4cd-4f40-b484-9558c5b33732">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">value2</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1311181754951</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">70071097-b4cd-4f40-b484-9558c5b33732</attribute>
+                <attribute name="value">15</attribute>
+                <child name="validationFormat">
+                  <ref pathref="f915b29a-9092-4e32-a889-2387d355c9f4"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="ac189f44-c473-46f7-ae6d-545b87237c3f">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339161107431</attribute>
+                <attribute name="name">success</attribute>
+                <attribute name="responseSymbol">success</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">ac189f44-c473-46f7-ae6d-545b87237c3f</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;97.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;77.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;229.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;76.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="183e3f1a-adaf-49b9-9478-6733efee22ef"/>
+                </child>
+                <child name="source">
+                  <ref idref="0ea704a5-172b-4fc6-94f9-fb59b18be749"/>
+                </child>
+              </node>
+              <node type="transition" id="e9216613-8461-468f-8365-e9260f9c9713">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339161225088</attribute>
+                <attribute name="name">failure</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">e9216613-8461-468f-8365-e9260f9c9713</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;64.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;63.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;61.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;162.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="dabac635-950e-42d7-90b2-4d35159a14b2"/>
+                </child>
+                <child name="source">
+                  <ref idref="0ea704a5-172b-4fc6-94f9-fb59b18be749"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node type="step" id="81339d28-516e-4f7d-ae24-90cc14f88138">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;
+Compares two strings, returning a true response if and only if they contain the same sequence of characters. A null string is considered to be equal to an empty string.
+
+Inputs:
+string1 - The first string.
+string2 - The second string.
+ignoreCase - If set to 'true', then the comparison ignores case considerations. The two strings are considered equal ignoring case if they are of the same length and corresponding characters in the two strings are equal ignoring case. If set to any value other than 'true', then the strings must match exactly to be considered equal.
+
+responses:
+true - If the two strings are equal
+false - If the two strings are not equal
+
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158219999</attribute>
+          <attribute name="name">Is Cancelled?</attribute>
+          <attribute name="opRef">
+            <ref id="7c2f47aa-a4b3-4a7d-b3d4-007f285f7d29"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">81339d28-516e-4f7d-ae24-90cc14f88138</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;399.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;317.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="userInputBinding" id="bbb991f5-0594-4b9a-80d9-a60e401715e8">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">workflowStatus</attribute>
+                <attribute name="inputSymbol">string1</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158219999</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">bbb991f5-0594-4b9a-80d9-a60e401715e8</attribute>
+              </node>
+              <node type="staticBinding" id="bded0363-a6b1-40e2-810b-cd0f55f21c37">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">string2</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158249344</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">bded0363-a6b1-40e2-810b-cd0f55f21c37</attribute>
+                <attribute name="value">Cancelled</attribute>
+              </node>
+              <node type="staticBinding" id="9b3d4727-7272-461f-a2a3-bc0f6f4ed690">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">ignoreCase</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158269104</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">9b3d4727-7272-461f-a2a3-bc0f6f4ed690</attribute>
+                <attribute name="value">true</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="82944566-6103-4a54-a5d7-02d8f63e16f2">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158837273</attribute>
+                <attribute name="name">true</attribute>
+                <attribute name="responseSymbol">true</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">82944566-6103-4a54-a5d7-02d8f63e16f2</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;321.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;391.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;157.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;216.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="81339d28-516e-4f7d-ae24-90cc14f88138"/>
+                </child>
+              </node>
+              <node type="transition" id="2536c494-58d9-4cb9-8db1-73be0054a3f1">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339159022483</attribute>
+                <attribute name="name">false</attribute>
+                <attribute name="responseSymbol">false</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">2536c494-58d9-4cb9-8db1-73be0054a3f1</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;312.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;341.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;175.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;335.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="d0bf0dbf-fa91-43ef-93fc-aa4b1fc44bce"/>
+                </child>
+                <child name="source">
+                  <ref idref="81339d28-516e-4f7d-ae24-90cc14f88138"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="8a12308a-4861-4d06-b299-27ad15d269f3" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;
+Compares two strings, returning a true response if and only if they contain the same sequence of characters. A null string is considered to be equal to an empty string.
+
+Inputs:
+string1 - The first string.
+string2 - The second string.
+ignoreCase - If set to 'true', then the comparison ignores case considerations. The two strings are considered equal ignoring case if they are of the same length and corresponding characters in the two strings are equal ignoring case. If set to any value other than 'true', then the strings must match exactly to be considered equal.
+
+responses:
+true - If the two strings are equal
+false - If the two strings are not equal
+
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158219999</attribute>
+          <attribute name="name">Is Success?</attribute>
+          <attribute name="opRef">
+            <ref id="7c2f47aa-a4b3-4a7d-b3d4-007f285f7d29"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">8a12308a-4861-4d06-b299-27ad15d269f3</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;385.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;168.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="userInputBinding" id="df06944d-0f3d-47d6-a11e-f55f5eb13408">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">workflowStatus</attribute>
+                <attribute name="inputSymbol">string1</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158219999</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">df06944d-0f3d-47d6-a11e-f55f5eb13408</attribute>
+              </node>
+              <node type="staticBinding" id="1786f68d-a038-416c-8915-97d3cd89bba4">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">string2</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158249344</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">1786f68d-a038-416c-8915-97d3cd89bba4</attribute>
+                <attribute name="value">Success</attribute>
+              </node>
+              <node type="staticBinding" id="30f87cb7-4d87-43d1-acd8-2cfbda730c17">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">ignoreCase</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158269104</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">30f87cb7-4d87-43d1-acd8-2cfbda730c17</attribute>
+                <attribute name="value">true</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="36a4a8e9-237c-4f75-8ac2-e8f72fe443e8">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158779123</attribute>
+                <attribute name="name">true</attribute>
+                <attribute name="responseSymbol">true</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">36a4a8e9-237c-4f75-8ac2-e8f72fe443e8</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;302.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;174.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;440.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;165.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="c72f931f-e1c2-41ad-8bbc-f37dff8ae744"/>
+                </child>
+                <child name="source">
+                  <ref idref="8a12308a-4861-4d06-b299-27ad15d269f3"/>
+                </child>
+              </node>
+              <node type="transition" id="94544381-6591-40e6-8715-e34b120f4d75">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158806064</attribute>
+                <attribute name="name">false</attribute>
+                <attribute name="responseSymbol">false</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">94544381-6591-40e6-8715-e34b120f4d75</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;302.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;174.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;310.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;288.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4e17b2cc-47a1-4aa3-aa54-720e5efcbaf6"/>
+                </child>
+                <child name="source">
+                  <ref idref="8a12308a-4861-4d06-b299-27ad15d269f3"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="4e17b2cc-47a1-4aa3-aa54-720e5efcbaf6" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;
+Compares two strings, returning a true response if and only if they contain the same sequence of characters. A null string is considered to be equal to an empty string.
+
+Inputs:
+string1 - The first string.
+string2 - The second string.
+ignoreCase - If set to 'true', then the comparison ignores case considerations. The two strings are considered equal ignoring case if they are of the same length and corresponding characters in the two strings are equal ignoring case. If set to any value other than 'true', then the strings must match exactly to be considered equal.
+
+responses:
+true - If the two strings are equal
+false - If the two strings are not equal
+
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158219999</attribute>
+          <attribute name="name">Is Failed?</attribute>
+          <attribute name="opRef">
+            <ref id="7c2f47aa-a4b3-4a7d-b3d4-007f285f7d29"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">4e17b2cc-47a1-4aa3-aa54-720e5efcbaf6</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;546.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;317.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="userInputBinding" id="4b5b057a-ab7f-4234-af4e-a42c0895cdfb">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">workflowStatus</attribute>
+                <attribute name="inputSymbol">string1</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158219999</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">4b5b057a-ab7f-4234-af4e-a42c0895cdfb</attribute>
+              </node>
+              <node type="staticBinding" id="252780f9-a082-44bc-900d-cf78815cf08b">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">string2</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158249344</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">252780f9-a082-44bc-900d-cf78815cf08b</attribute>
+                <attribute name="value">Failed</attribute>
+              </node>
+              <node type="staticBinding" id="aa14b7a2-465a-4fbe-9ea3-8cc8b52d225a">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">ignoreCase</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158269104</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">aa14b7a2-465a-4fbe-9ea3-8cc8b52d225a</attribute>
+                <attribute name="value">true</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="8263c24a-5f44-4818-8a69-f59a52db25a4">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158811048</attribute>
+                <attribute name="name">false</attribute>
+                <attribute name="responseSymbol">false</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">8263c24a-5f44-4818-8a69-f59a52db25a4</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;310.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;288.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;321.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;391.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="81339d28-516e-4f7d-ae24-90cc14f88138"/>
+                </child>
+                <child name="source">
+                  <ref idref="4e17b2cc-47a1-4aa3-aa54-720e5efcbaf6"/>
+                </child>
+              </node>
+              <node type="transition" id="520dcf7d-43eb-4034-bc0a-19fbb7766935">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158839108</attribute>
+                <attribute name="name">true</attribute>
+                <attribute name="responseSymbol">true</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">520dcf7d-43eb-4034-bc0a-19fbb7766935</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;310.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;288.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;157.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;216.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="4e17b2cc-47a1-4aa3-aa54-720e5efcbaf6"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="d0bf0dbf-fa91-43ef-93fc-aa4b1fc44bce" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;Sleeps for the number of seconds specified in the input.
+
+Inputs:
+seconds - The number of seconds to sleep.
+
+Responses:
+success - Slept for the number of seconds given as input.
+failure - Was unable to sleep for some reason.
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158375489</attribute>
+          <attribute name="name">Sleep</attribute>
+          <attribute name="opRef">
+            <ref id="d1bbf441-824a-450e-afae-2ddec0e0f35e"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">d0bf0dbf-fa91-43ef-93fc-aa4b1fc44bce</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;262.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;317.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="staticBinding" id="c437612d-faf8-4c86-8a68-3984ddc701ae">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">seconds</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158391880</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">c437612d-faf8-4c86-8a68-3984ddc701ae</attribute>
+                <attribute name="value">60</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="9b4912fa-a547-492c-9777-9293f56f3769">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339159024777</attribute>
+                <attribute name="name">success</attribute>
+                <attribute name="responseSymbol">success</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">9b4912fa-a547-492c-9777-9293f56f3769</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;175.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;335.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;63.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;333.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="2764b787-e547-4b5e-b529-09516f75d2b5"/>
+                </child>
+                <child name="source">
+                  <ref idref="d0bf0dbf-fa91-43ef-93fc-aa4b1fc44bce"/>
+                </child>
+              </node>
+              <node type="transition" id="80541100-c24b-49d4-8596-f149f5e7a1bd">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339159035117</attribute>
+                <attribute name="name">failure</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">80541100-c24b-49d4-8596-f149f5e7a1bd</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;175.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;335.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;157.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;216.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="d0bf0dbf-fa91-43ef-93fc-aa4b1fc44bce"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="cdadc8a0-3349-489a-854c-6238065a0827" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;Sleeps for the number of seconds specified in the input.
+
+Inputs:
+seconds - The number of seconds to sleep.
+
+Responses:
+success - Slept for the number of seconds given as input.
+failure - Was unable to sleep for some reason.
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158375489</attribute>
+          <attribute name="name">Sleep</attribute>
+          <attribute name="opRef">
+            <ref id="d1bbf441-824a-450e-afae-2ddec0e0f35e"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">cdadc8a0-3349-489a-854c-6238065a0827</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;523.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;28.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="staticBinding" id="513bcb5c-1585-43b8-ba11-0eae3cb1bc34">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">seconds</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158391880</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">513bcb5c-1585-43b8-ba11-0eae3cb1bc34</attribute>
+                <attribute name="value">15</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="f4d12243-8e0b-4bb3-bfe3-93b323f2c2f8">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158656962</attribute>
+                <attribute name="name">success</attribute>
+                <attribute name="responseSymbol">success</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">f4d12243-8e0b-4bb3-bfe3-93b323f2c2f8</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;570.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;83.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;678.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;87.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="efe2a479-f000-463f-8f9c-6fb279f90b14"/>
+                </child>
+                <child name="source">
+                  <ref idref="cdadc8a0-3349-489a-854c-6238065a0827"/>
+                </child>
+              </node>
+              <node type="transition" id="2f9d3f2c-5b72-4a73-a4f8-d1d657aa4dcf">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158853018</attribute>
+                <attribute name="name">failure</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">2f9d3f2c-5b72-4a73-a4f8-d1d657aa4dcf</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;440.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;75.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;550.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;174.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="a1ee11f5-f3cd-4c32-b5fe-87acbf90c1ce"/>
+                </child>
+                <child name="source">
+                  <ref idref="cdadc8a0-3349-489a-854c-6238065a0827"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="2764b787-e547-4b5e-b529-09516f75d2b5" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">Counts from one number to another number.
+
+&lt;pre&gt;
+Inputs:
+from - The number to start counting at.
+to - The number to count to.
+incrementBy - The number to increment by while counting. If unspecified this is 1. If you wanted to count 2,4,6,8 this would be 2.
+reset - If true, then the counter will restart counting from the beginning.
+
+NOTE: These values must be between -9223372036854775808 and 9223372036854775807
+
+Returns:
+The number that was just counted.
+
+Note: the primary result is resultString, Result can also be used. result (All lower case) should not be used as it is the response code.
+
+Responses:
+has more - Not yet done counting.
+no more - Done counting. This will only be returned once, then counting restarts.
+failure - Something went wrong.
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158499418</attribute>
+          <attribute name="name">Counter</attribute>
+          <attribute name="opRef">
+            <ref id="c62eeb58-f329-4ae3-b336-54bdc5c9f3d6"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">2764b787-e547-4b5e-b529-09516f75d2b5</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;146.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;317.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="staticBinding" id="f9bdecc9-40e2-464f-b17a-eb0cea4697e8">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">from</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158558302</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">f9bdecc9-40e2-464f-b17a-eb0cea4697e8</attribute>
+                <attribute name="value">1</attribute>
+              </node>
+              <node type="staticBinding" id="b08df6c2-d791-4e9d-b13a-afa051bde976">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">to</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158573457</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">b08df6c2-d791-4e9d-b13a-afa051bde976</attribute>
+                <attribute name="value">3</attribute>
+              </node>
+              <node type="staticBinding" id="6e272db5-1a12-417f-a77b-38d58e6c2581">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">incrementBy</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158499442</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">6e272db5-1a12-417f-a77b-38d58e6c2581</attribute>
+                <attribute name="value">1</attribute>
+              </node>
+              <node type="staticBinding" id="db3c6fce-ce7a-479f-b0b7-bab7b4adfec2">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">reset</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339158499465</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">db3c6fce-ce7a-479f-b0b7-bab7b4adfec2</attribute>
+                <attribute name="value">false</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="081f31b4-a040-428e-896e-ee7c89faf6d3">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339159028208</attribute>
+                <attribute name="name">has more</attribute>
+                <attribute name="responseSymbol">has more</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">081f31b4-a040-428e-896e-ee7c89faf6d3</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;598.2536846097187&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;-1.2091552273529216&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;63.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;333.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;73.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;76.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="183e3f1a-adaf-49b9-9478-6733efee22ef"/>
+                </child>
+                <child name="source">
+                  <ref idref="2764b787-e547-4b5e-b529-09516f75d2b5"/>
+                </child>
+              </node>
+              <node type="transition" id="c4f10001-8449-4673-85b6-559586e27368">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339159031794</attribute>
+                <attribute name="name">no more</attribute>
+                <attribute name="responseSymbol">no more</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">c4f10001-8449-4673-85b6-559586e27368</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;63.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;333.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;157.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;216.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="2764b787-e547-4b5e-b529-09516f75d2b5"/>
+                </child>
+              </node>
+              <node type="transition" id="5dea1057-fa05-4d9f-877d-bbfdd3099d23">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339159033572</attribute>
+                <attribute name="name">failure</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">5dea1057-fa05-4d9f-877d-bbfdd3099d23</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;631.1165377398775&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;-13.001470580306687&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;205.6046511627907&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;323.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;236.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;260.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;317.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;223.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="2764b787-e547-4b5e-b529-09516f75d2b5"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="183e3f1a-adaf-49b9-9478-6733efee22ef" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation">&lt;pre&gt;
+Service to perform an HTTP GET via the Java HTTP Client
+
+Inputs:
+url - the url to attempt to retrieve.
+username - the username to authenticate to url with.
+password - the password for username.
+timeout - a timeout after which the connection should be terminated, or 0 for no timeout.
+useCookies - Enables cookie tracking. Cookies will be stored between consecutive calls. valid options are: true/false
+followRedirects - specifies whether or not the get command should automatically follow redirects.
+trustAllRoots - enables weak security over SSL. A SSH certificate is trusted even if no trusted CA issued it. valid options are: true/false
+proxy - a proxy to use when accessing the web site.
+proxyPort - a port on the proxy to connect to.
+proxyUsername - a username to use when connecting to the proxy.
+proxyPassword - a password to use when connecting to the proxy.
+encodeURL - perform URL encoding.
+userAgent - if the HTTP header USER_AGENT needs to be overridden, pass in the value here
+characterSet - the characterSet for HTTP Get request and response. Default is UTF-8.
+
+Responses:
+success - URL retrieved successfully.
+failure - The url could not be retrieved.
+&lt;/pre&gt;</attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1332500007887</attribute>
+          <attribute name="name">Http Client Get</attribute>
+          <attribute name="opRef">
+            <ref id="3e4ddaf8-c20d-48b7-8f05-3dd74cac2643"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">183e3f1a-adaf-49b9-9478-6733efee22ef</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;146.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;28.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list">
+              <node type="flow-variable-assignment" id="cb2d25a8-2956-439a-a26d-e24a88da390e">
+                <attribute name="action">OVERWRITE</attribute>
+                <attribute name="annotation"></attribute>
+                <attribute name="assignment-target-type">Flow Variable</attribute>
+                <attribute name="context-key">workflowXml</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="modifiedTimestamp">1332993273915</attribute>
+                <attribute name="name">assignment</attribute>
+                <attribute name="uuid">cb2d25a8-2956-439a-a26d-e24a88da390e</attribute>
+                <child name="expression">
+                  <node type="expression" id="e2d15196-f5eb-4a17-a831-f8b8fbe94c63">
+                    <attribute name="annotation"></attribute>
+                    <attribute name="field-name">document</attribute>
+                    <attribute name="last_modified_by">admin</attribute>
+                    <attribute name="modifiedTimestamp">1332993408040</attribute>
+                    <attribute name="name">Result Field: document</attribute>
+                    <attribute name="source-type">RAWRESULT</attribute>
+                    <attribute name="uuid">e2d15196-f5eb-4a17-a831-f8b8fbe94c63</attribute>
+                    <child name="filters">
+                      <collection type="list"/>
+                    </child>
+                  </node>
+                </child>
+              </node>
+            </collection>
+          </child>
+          <child name="bindings">
+            <collection type="list">
+              <node type="userInputBinding" id="d11647dd-fb34-40ee-aa63-bc9e71c2146b">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">location</attribute>
+                <attribute name="inputSymbol">url</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339159245892</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">true</attribute>
+                <attribute name="uuid">d11647dd-fb34-40ee-aa63-bc9e71c2146b</attribute>
+              </node>
+              <node type="userInputBinding" id="25422333-bd04-4090-8a02-2d3b46bf0895">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">coreUsername</attribute>
+                <attribute name="inputSymbol">username</attribute>
+                <attribute name="inputType">Object</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339162592897</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">25422333-bd04-4090-8a02-2d3b46bf0895</attribute>
+              </node>
+              <node type="userInputBinding" id="3a8a2de9-5bea-41b5-a84d-2d22811f4929">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="fromContextKey">corePassword</attribute>
+                <attribute name="inputSymbol">password</attribute>
+                <attribute name="inputType">Object</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isMultiSelect">false</attribute>
+                <attribute name="isPersisted">false</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1339162596897</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">3a8a2de9-5bea-41b5-a84d-2d22811f4929</attribute>
+              </node>
+              <node type="staticBinding" id="84fa3af7-7181-400b-8e8b-fdf272e96f69">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">timeout</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517333207</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">84fa3af7-7181-400b-8e8b-fdf272e96f69</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="fd6bad08-d47e-4e24-ab76-2553bd8125d2">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">useCookies</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517338503</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">fd6bad08-d47e-4e24-ab76-2553bd8125d2</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="a131c611-0a23-4553-90fb-1918daa1a637">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">followRedirects</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517344503</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">a131c611-0a23-4553-90fb-1918daa1a637</attribute>
+                <attribute name="value">true</attribute>
+              </node>
+              <node type="staticBinding" id="f2d4f156-cc7c-4e9c-b48a-aaea949ea2c7">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">trustAllRoots</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517349160</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">f2d4f156-cc7c-4e9c-b48a-aaea949ea2c7</attribute>
+                <attribute name="value">true</attribute>
+              </node>
+              <node type="staticBinding" id="74e21e26-8b7b-451a-b1f9-975f8bfe2b05">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">proxy</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517354425</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">74e21e26-8b7b-451a-b1f9-975f8bfe2b05</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="32c671b2-e9d1-4571-84f5-f6cab260b5f0">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">proxyPort</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517359582</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">32c671b2-e9d1-4571-84f5-f6cab260b5f0</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="37b8e77a-3ca8-45df-90fc-3f66d1b25413">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">proxyUsername</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517364832</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">37b8e77a-3ca8-45df-90fc-3f66d1b25413</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="16b9ba64-0e1f-431b-9cf7-2ebb04b8c611">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">proxyPassword</attribute>
+                <attribute name="inputType">Encrypted</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">false</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517371394</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="recordKey"></attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">16b9ba64-0e1f-431b-9cf7-2ebb04b8c611</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="639e983a-9fa1-4f76-9152-d4a73adfecc0">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">encodeURL</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332500007918</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">639e983a-9fa1-4f76-9152-d4a73adfecc0</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="382fff91-6108-438c-bdb2-79bab669bf72">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">false</attribute>
+                <attribute name="assignToContext">false</attribute>
+                <attribute name="inputSymbol">userAgent</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517386253</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">382fff91-6108-438c-bdb2-79bab669bf72</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="b1504f30-7b8b-408d-9233-3c1692e1ed57">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">characterSet</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517392285</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">b1504f30-7b8b-408d-9233-3c1692e1ed57</attribute>
+                <attribute name="value"></attribute>
+              </node>
+              <node type="staticBinding" id="704269e9-4885-472d-a739-7e8b37e0a75f">
+                <attribute name="annotation"></attribute>
+                <attribute name="assignFromContext">true</attribute>
+                <attribute name="assignToContext">true</attribute>
+                <attribute name="inputSymbol">header_Accept</attribute>
+                <attribute name="inputType">String</attribute>
+                <attribute name="isList">false</attribute>
+                <attribute name="isPersisted">true</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="listDelimiter">,</attribute>
+                <attribute name="modifiedTimestamp">1332517491269</attribute>
+                <attribute name="record">false</attribute>
+                <attribute name="required">false</attribute>
+                <attribute name="uuid">704269e9-4885-472d-a739-7e8b37e0a75f</attribute>
+                <attribute name="value">application/xml</attribute>
+              </node>
+            </collection>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="7a479298-d237-4ac3-89a7-ec325f302112">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339156850684</attribute>
+                <attribute name="name">success</attribute>
+                <attribute name="responseSymbol">success</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">7a479298-d237-4ac3-89a7-ec325f302112</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;66.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;86.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;168.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;76.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="523e38fb-4dd6-403b-aa58-cc6317c57731"/>
+                </child>
+                <child name="source">
+                  <ref idref="183e3f1a-adaf-49b9-9478-6733efee22ef"/>
+                </child>
+              </node>
+              <node type="transition" id="4cc147f4-433f-4ab9-b48c-27ce6f422520">
+                <attribute name="annotation">Failed to Execute DMA Workflow:&lt;br&gt;
+${Result}</attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339157317562</attribute>
+                <attribute name="name">failure</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">4cc147f4-433f-4ab9-b48c-27ce6f422520</attribute>
+                <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;labelposition&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;333.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;points&lt;/string&gt; 
+   &lt;object class="java.util.ArrayList"&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;203.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;84.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+    &lt;void method="add"&gt; 
+     &lt;object class="com.iconclude.dharma.commons.util.EncodeablePoint2D"&gt; 
+      &lt;void property="x"&gt; 
+       &lt;double&gt;175.0&lt;/double&gt; 
+      &lt;/void&gt; 
+      &lt;void property="y"&gt; 
+       &lt;double&gt;248.0&lt;/double&gt; 
+      &lt;/void&gt; 
+     &lt;/object&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+                <child name="destination">
+                  <ref idref="4fab34e7-6015-4bc1-a52b-8f42f4b6c87a"/>
+                </child>
+                <child name="source">
+                  <ref idref="183e3f1a-adaf-49b9-9478-6733efee22ef"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+        <node id="a1ee11f5-f3cd-4c32-b5fe-87acbf90c1ce" type="step">
+          <attribute name="addResultToRunContext">false</attribute>
+          <attribute name="annotation"></attribute>
+          <attribute name="checkPointStep">true</attribute>
+          <attribute name="hideInbound">false</attribute>
+          <attribute name="historyCheckPointStep">true</attribute>
+          <attribute name="isCriticalStep">false</attribute>
+          <attribute name="isNonBlocking">false</attribute>
+          <attribute name="isParallelStep">false</attribute>
+          <attribute name="isSimpleResponse">false</attribute>
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1339158849808</attribute>
+          <attribute name="name">Error : failure</attribute>
+          <attribute name="opRef">
+            <ref id="86c33fac-7b62-49f5-bf0b-1011e90ca258"/>
+          </attribute>
+          <attribute name="recordInHistory">false</attribute>
+          <attribute name="recordPrimaryOutput">true</attribute>
+          <attribute name="recordRawOutput">true</attribute>
+          <attribute name="scriptResultStep">false</attribute>
+          <attribute name="uuid">a1ee11f5-f3cd-4c32-b5fe-87acbf90c1ce</attribute>
+          <attribute name="viewAttributes">&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;java version="1.6.0_18" class="java.beans.XMLDecoder"&gt; 
+ &lt;object class="java.util.HashMap"&gt; 
+  &lt;void method="put"&gt; 
+   &lt;string&gt;bounds&lt;/string&gt; 
+   &lt;object class="com.iconclude.dharma.commons.util.EncodeableRectangle2D"&gt; 
+    &lt;void property="height"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="width"&gt; 
+     &lt;double&gt;100.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="x"&gt; 
+     &lt;double&gt;633.0&lt;/double&gt; 
+    &lt;/void&gt; 
+    &lt;void property="y"&gt; 
+     &lt;double&gt;168.0&lt;/double&gt; 
+    &lt;/void&gt; 
+   &lt;/object&gt; 
+  &lt;/void&gt; 
+ &lt;/object&gt; 
+&lt;/java&gt; 
+</attribute>
+          <child name="assignments">
+            <collection type="list"/>
+          </child>
+          <child name="bindings">
+            <collection type="list"/>
+          </child>
+          <child name="flow">
+            <ref idref="fb3b32c7-bc22-4e01-9a67-5973eb066731"/>
+          </child>
+          <child name="properties">
+            <map/>
+          </child>
+          <child name="transitions">
+            <collection type="list">
+              <node type="transition" id="680e9276-5308-4057-be3c-eb773fe9f61c">
+                <attribute name="annotation"></attribute>
+                <attribute name="command">NEXT</attribute>
+                <attribute name="last_modified_by">admin</attribute>
+                <attribute name="linkMode">false</attribute>
+                <attribute name="modifiedTimestamp">1339158849808</attribute>
+                <attribute name="name">return</attribute>
+                <attribute name="responseSymbol">failure</attribute>
+                <attribute name="shouldHandoff">false</attribute>
+                <attribute name="transitionValue">0.0</attribute>
+                <attribute name="uuid">680e9276-5308-4057-be3c-eb773fe9f61c</attribute>
+                <attribute name="viewAttributes"></attribute>
+                <child name="destination">
+                  <ref idref="a1ee11f5-f3cd-4c32-b5fe-87acbf90c1ce"/>
+                </child>
+                <child name="source">
+                  <ref idref="a1ee11f5-f3cd-4c32-b5fe-87acbf90c1ce"/>
+                </child>
+              </node>
+            </collection>
+          </child>
+        </node>
+      </collection>
+    </child>
+  </node>
+</root>

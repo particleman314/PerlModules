@@ -1,0 +1,40 @@
+#! /usr/bin/env perl
+ 
+use strict;
+use warnings;
+
+use FindBin;
+use lib "$FindBin::Bin/../../..";
+use lib "$FindBin::Bin/../../../PerlModules";
+use Test::More tests => 6;
+
+BEGIN
+  {
+    require_ok("HP/TestTools.pl");
+    use_ok("File::Spec");
+    use_ok("Cwd");
+	use_ok("HP::Path");
+	use_ok("HP::IOTools");
+    use_ok("HP::FileManager");
+    use_ok("HP::StreamManager");
+  }
+
+my $testdir  = &MakeTempDir('DELETIONS_TOO_DEEP');
+my $numTests = 1;
+
+for (my $testcounts = 0; $testcounts < $numTests; ++$testcounts) {
+   my @subpathlgt = &MakeNumbers(1, 30, 10, 0);
+   my @dircomps = ();
+   foreach my $sbl (@subpathlgt) {
+     my $subpathname = join("",&MakeLetters($sbl));
+     push(@dircomps, $subpathname);
+   }
+   my $finalsubpath = join('/', @dircomps);
+   my $fullpath = &join_path("$testdir", "$finalsubpath");
+   $fullpath = &HP::Path::__flip_slashes("$fullpath", 'backward', 'forward');
+   &make_recursive_dirs("$fullpath");
+   my $nested_too_deep = &HP::FileManager::__nest_directory_too_deep("$fullpath");
+   print STDERR "NESTED TOO DEEP = $nested_too_deep\n";
+}
+
+#rmtree("$testdir");

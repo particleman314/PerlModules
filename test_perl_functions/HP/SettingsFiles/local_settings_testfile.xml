@@ -1,0 +1,135 @@
+<local_data>
+    <build_section>
+	   <human>
+		  <!-- Get this from the provider_mapper as default -->
+	      <name>DMA Application Provider for Provisioning Oracle</name>
+	   </human>
+	   <csl>
+	      <content>
+		     <type>CP6</type>
+			 <external>{csl->identifier}</external>
+			 <version>2.0.0</version>
+			 <!-- Get this from the provider_mapper as default -->
+			 <working_base>DMA Application Provider WorkFlows</working_base>
+			 <name>
+			    <oo9>{human->name}</oo9>
+				<!-- Get this from the provider_mapper as defaul -->
+			    <oo10>dma-provisioning-oracle</oo10>
+			 </name>
+			 <extension>
+			    <oo10>cp-{OO10->oo->content->cpversion}</oo10>
+			 </extension>
+			 <description>Solution for a {human-name}</description>
+		  </content>
+		  <library>
+		     <pack>CSA Content Pack</pack>
+		  </library>
+		  <basename>{csl->content->external}-{human->name}</basename>
+		  <jarname>{csl->basename}</jarname>
+		  <zipname>{csl->basename}</zipname>
+	   </csl>
+	   <oo>
+	      <flow>
+		     <repo>
+			    <description>OO Flow description for {human->name}</description>
+			 </repo>
+		  </flow>
+	   </oo>
+	   <csa>
+	      <version>4.10</version>
+	   </csa>
+	   <maven>
+	      <parameters>
+		      <parameter>
+			     <name>csl.oo.zip</name>
+				 <value>0</value>
+			  </parameter>
+		  </parameters>
+		  <defines>
+		     <define>
+			 </define>
+		  </defines>
+		  <targets>
+		     <target>
+			 </target>
+		  </targets>
+	   </maven>
+	</build_section>
+	
+	<release_matrix>
+       <HP>
+          <CSA>
+             <version id="3.20"></version>
+		  	 <version id="4.00"></version>
+          </CSA>
+          <OO>
+             <version id="9.07" patch="003" tag="OO9">
+			    <cp id="11"></cp>
+			 </version>
+	         <version id="10.01" patch="0001" tag="OO10"></version>
+	      </OO>
+	   </HP>
+	</release_matrix>
+	
+    <supportMatrix>
+       <provider name="com.hp.csl.dma" displayName="Database Middleware Automation" mandatory="true">
+          <version comparison="equals" value="10.00" />
+          <version comparison="equals" value="10.10" />
+          <version comparison="equals" value="10.20" />
+       </provider>
+    </supportMatrix>
+	
+	<PDTData>
+       <ooengines>
+          <ooengine>
+		     <folder path="/Library/CSA Content Pack/CSA3.2/Providers/Platform/DMA/Actions" update="true" recursive="true"/>
+		     <folder path="/Library/CSA Content Pack/CSA3.2/Providers/Platform/DMA/Validation" update="true" recursive="true"/>
+          </ooengine>
+       </ooengines>
+	</PDTData>
+	
+	<FlowDependencies>
+	   <ooflow tag="OO10">
+		  <dep value="com.hp.csl.base.util" version="1.0.0"/>
+	      <dep value="com.hp.csl.microsoft.azure" version="2.0.0"/>
+	   </ooflow>
+	</FlowDependencies>
+
+	<installerData>
+       <serviceblueprints>
+		  <blueprint type="sequence">
+		     <name>SERVICE_DESIGN_CSL_BP_MOE_DMA_ORACLE_PROVISION_3.20_CP3.0_8a8186bb4127214f01414a1a33f07e1c</name>
+             <displayName>MOE DMA Service Design</displayName>
+			 <description>Provisioning Oracle using MOE and DMA</description>
+			 <version>
+			    <major>1</major>
+				<minor>0</minor>
+				<revision/>
+				<subrevision/>
+			 </version>
+			 <dependencies>
+		        <ooflow tag="OO10">
+		           <artifact value="unknown" path="local" type="OOTB" />
+		        </ooflow>
+			 </dependencies>
+		  </blueprint>
+		  <blueprint type="sequence">
+		     <name>SERVICE_DESIGN_CSL_BP_VCENTER_DMA_ORACLE_PROVISION_3.20_CP3.0_90cd93b740cf2c65014112bb63762806</name>
+             <displayName>vCenter DMA Service Design</displayName>
+			 <description>Provisioning Oracle using vCenter and DMA</description>
+			 <version>
+			    <major>1</major>
+				<minor>0</minor>
+				<revision/>
+				<subrevision/>
+			 </version>
+			 <dependencies>
+		        <ooflow tag="OO10">
+		           <artifact value="base-cp-1.0.121" path="local" type="OOTB" version="1.0.121" />
+		           <artifact value="cloud-cp-1.0.116" path="local" type="OOTB" version="1.0.116"/>
+		        </ooflow>
+			 </dependencies>
+		  </blueprint>
+	   </serviceblueprints>
+	</installerData>
+</local_data>

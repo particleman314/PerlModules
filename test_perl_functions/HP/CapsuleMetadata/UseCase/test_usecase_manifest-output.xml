@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<usecaseCapsule>
+   <installerData count="0">
+      <description />
+      <name />
+      <serviceblueprints count="0" />
+      <version>
+         <major />
+         <minor />
+         <revision />
+         <subrevision />
+      </version>
+   </installerData>
+   <publisher />
+   <supportMatrix count="0" />
+</usecaseCapsule>
+

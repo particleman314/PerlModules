@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trial attribute="Hello" >
+   <subnode value="1" >
+      <build_date>2014-05-08 16:49:10</build_date>
+      <build_number>42</build_number>
+      <svn_revision>12345</svn_revision>
+   </subnode>
+</trial>

@@ -1,0 +1,50 @@
+<flare_directive group="CSL">
+   <injection_points>
+      <injection_point>
+	    <name></name>
+		<method></method>
+	  </injection_point>
+   </injection_points>
+   <parameters>
+	 <scm type="svn">  <!-- could also use type == [ git, hg, cvs, ... ] -->
+	    <rootpath>some path</rootpath>
+		<username>csldocbuilder</username>
+		<password>OBFUSCATED{}</password>
+		<subdirs>
+		  <subdir type="include">
+		    <name>dir1</name>
+		    <name>dir3</name>
+		    <name>dir5</name>
+		  </subdir>
+		  <subdir type="exclude">
+		    <name>dir2</name>
+		    <name>dir4</name>
+		  </subdir>
+		</subdirs> 
+	 </scm>
+     <flare>
+       <logdir>some dir</logdir>
+       <logfile>some basefile</logfile>
+	   <root>Project Files</root>
+	   <projectdir>blah</projectdir>
+	   <projectfile>blah.flprj</projectfile>
+	   <batchfile>blah.flbat</batchfile>
+	   <flare_version>
+	     <id>9</id>
+	     <regex>MadCap Flare</regex>
+	   </flare_version>
+	   <importdir></importdir>
+	   <importfiles>
+	     <importfile type="parent"></importfile>
+		 <importfile type="child"></importfile>
+	   </importfiles>
+	   <output>
+	     <userdir></userdir>
+	   </output>
+	   <scanflags>
+	     <flag></flag>
+		 <flag></flag>
+	   </scanflags>
+	 </flare>
+   </parameters>
+</flare_directive>

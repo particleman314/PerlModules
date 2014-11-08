@@ -1,0 +1,82 @@
+<build_driver>
+   <mode>capsule</mode>
+   <executables>
+      <executable description="Commandline SubVersion Binary" triggered_cli="no-svn" triggered_value="0|undef">
+	     <id>svn</id>
+		 <name>svn</name>
+		 <arg_id>svnexe-path</arg_id>
+		 <env_ids>
+		   <env_id>SVN</env_id>
+		 </env_ids>
+		 <os_ids>
+		   <os_id type="win">C:\Program Files\TortoiseSVN\bin</os_id>
+		   <os_id type="lin">/usr/local/bin</os_id>
+		 </os_ids>
+		 <order>env, os, arg</order>
+	  </executable>
+      <executable description="Java Runtime Appliaction (JRE)">
+	     <id>java</id>
+		 <name>java</name>
+		 <arg_id>javaexe-path</arg_id>
+		 <env_ids>
+		   <env_id>JDK_HOME</env_id>
+		   <env_id>JAVA_HOME</env_id>
+		 </env_ids>
+		 <os_ids>
+		   <os_id type="win">C:\Program Files\Java\jdk1.7.0\bin</os_id>
+		   <os_id type="lin">/usr/local/bin</os_id>
+		 </os_ids>
+		 <order>env, os, arg</order>
+	  </executable>
+      <executable description="Java Compiler">
+	     <id>javac</id>
+		 <name>javac</name>
+		 <arg_id>javaexe-path</arg_id>
+		 <env_ids>
+		   <env_id>JDK_HOME</env_id>
+		   <env_id>JAVA_HOME</env_id>
+		 </env_ids>
+		 <os_ids>
+		   <os_id type="win">C:\Program Files\Java\jdk1.7.0\bin</os_id>
+		   <os_id type="lin">/usr/local/bin</os_id>
+		 </os_ids>
+		 <order>env, os, arg</order>
+	  </executable>
+      <executable description="Maven Compiler" triggered_cli="capsule-xml" triggered_value="0|undef">
+	     <id>maven</id>
+		 <name>mvn</name>
+		 <arg_id>mavenexe-path</arg_id>
+		 <env_ids>
+		   <env_id>M2_HOME</env_id>
+		   <env_id>MAVEN_HOME</env_id>
+		 </env_ids>
+		 <os_ids>
+		   <os_id type="win" coderef="true">__find_hinted_maven</os_id>
+		   <os_id type="lin">/usr/local/bin</os_id>
+		 </os_ids>
+		 <order>env, os, arg</order>
+	  </executable>
+      <executable description="Perl Compiler">
+	     <id>perl</id>
+		 <name>perl</name>
+		 <arg_id>perlexe-path</arg_id>
+		 <env_ids>
+		   <env_id>PERL_HOME</env_id>
+		 </env_ids>
+		 <order>env, arg</order>
+	  </executable>
+      <executable description="7z Compressor">
+	     <id>7z</id>
+		 <name>7z</name>
+		 <arg_id>7zipexe-path</arg_id>
+		 <env_ids>
+		   <env_id>SEVENZIP</env_id>
+		 </env_ids>
+		 <os_ids>
+		   <os_id type="win">C:\7Zip</os_id>
+		   <os_id type="lin">/usr/local/bin</os_id>
+		 </os_ids>
+		 <order>env, os, arg</order>
+	  </executable>
+   </executables>
+</build_driver>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow id="822de58e-49cf-4192-9db9-34f7da0a81d5">
+  <annotation>822de58e-49cf-4192-9db9-34f7da0a81d5.description</annotation>
+  <name>DMA Deploy Application</name>
+  <categories/>
+  <inputs>
+      <userInputBinding id="9792868e-ce8a-47c8-ad5a-dbcd683d4a2b">
+         <annotation/>
+         <assignFromContext>true</assignFromContext>
+         <assignToContext>true</assignToContext>
+         <inputType>STRING</inputType>
+         <isList>false</isList>
+         <required>false</required>
+         <isPersisted>true</isPersisted>
+         <inputSymbol>CSA_PROCESS_ID</inputSymbol>
+         <listDelimiter>,</listDelimiter>
+         <record>false</record>
+         <isMultiSelect>false</isMultiSelect>
+      </userInputBinding>
+      <staticBinding id="28cdc4ad-de35-4fe3-a8e3-2bde86466df5">
+         <annotation/>
+         <assignFromContext>true</assignFromContext>
+         <assignToContext>true</assignToContext>
+         <inputType>STRING</inputType>
+         <isList>false</isList>
+         <required>false</required>
+         <isPersisted>true</isPersisted>
+         <inputSymbol>RSC_PROVIDER_ID</inputSymbol>
+         <listDelimiter>,</listDelimiter>
+         <value>[TOKEN:RSC_PROVIDER_ID]</value>
+         <record>false</record>
+      </staticBinding>
+  </inputs>
+  <scriptlet id="e1ae04d7-1d03-41da-8f05-b8c317421cdc">
+      <annotation/>
+      <name>Operation:DMA Deploy Application (822de58e-49cf-4192-9db9-34f7da0a81d5)</name>
+      <type>RHINO</type>
+  </scriptlet>
+  <possibleResponses>
+      <opResponse id="0e029a28-0f54-4431-9067-bd2bf07886e1">
+         <annotation/>
+         <name>failure</name>
+         <isDefault>false</isDefault>
+         <onFailure>true</onFailure>
+         <type>ERROR</type>
+      </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="bc45d353-a2f9-465e-8258-eeccfc0aa0af">
+      <annotation/>
+      <name>FailureMessage</name>
+      <fieldName>serviceXmlFile</fieldName>
+      <sourceType>RAWRESULT</sourceType>
+      <filters/>
+  </resultExpression>
+  <iconSpec id="cc2e59ae-ea22-4ed5-adbc-f0f5929ff99d">
+      <baseIcon>change.png</baseIcon>
+      <basePath>/Integrations/</basePath>
+      <readOnly>false</readOnly>
+      <layers>
+         <iconSpec id="69eb750e-e9c6-4785-ad19-fec0b894dc70">
+            <baseIcon>fix3.png</baseIcon>
+            <basePath>/Annotations/</basePath>
+            <readOnly>false</readOnly>
+            <layers/>
+         </iconSpec>
+      </layers>
+  </iconSpec>
+  <callouts/>
+  <checkPointFlow>true</checkPointFlow>
+  <compatibleRuntimeContext>false</compatibleRuntimeContext>
+  <historyCheckPointFlow>true</historyCheckPointFlow>
+  <steps>
+      <step id="4d29fedf-7783-4e27-aaf8-1ba8b0feba5a">
+         <annotation>822de58e-49cf-4192-9db9-34f7da0a81d5.4d29fedf-7783-4e27-aaf8-1ba8b0feba5a.description</annotation>
+         <name>Is Server ?</name>
+         <bounds>
+            <x>131.0</x>
+            <y>323.0</y>
+         </bounds>
+         <layer>-1</layer>
+         <hideInbound>false</hideInbound>
+         <addResultToRunContext>false</addResultToRunContext>
+         <isCriticalStep>false</isCriticalStep>
+         <isNonBlocking>false</isNonBlocking>
+         <isParallelStep>false</isParallelStep>
+         <isSingleResponse>false</isSingleResponse>
+         <recordInHistory>false</recordInHistory>
+         <recordRawOutput>true</recordRawOutput>
+         <recordPrimaryOutput>true</recordPrimaryOutput>
+         <checkPointStep>true</checkPointStep>
+         <historyCheckPointStep>true</historyCheckPointStep>
+         <scriptResultStep>false</scriptResultStep>
+         <bindings>
+            <userInputBinding id="ab242d43-0d88-401c-9646-31f92e7c168b">
+               <annotation/>
+               <fromContextKey>SVC_COMPONENT_TYPE</fromContextKey>
+               <assignFromContext>true</assignFromContext>
+               <assignToContext>false</assignToContext>
+               <inputType>STRING</inputType>
+               <isList>false</isList>
+               <required>false</required>
+               <isPersisted>true</isPersisted>
+               <inputSymbol>string1</inputSymbol>
+               <listDelimiter>,</listDelimiter>
+               <record>false</record>
+               <isMultiSelect>false</isMultiSelect>
+            </userInputBinding>
+            <staticBinding id="84c7acaa-d887-4601-aa1d-7f95577a22bd">
+               <annotation/>
+               <assignFromContext>false</assignFromContext>
+               <assignToContext>false</assignToContext>
+               <inputType>STRING</inputType>
+               <isList>false</isList>
+               <required>false</required>
+               <isPersisted>true</isPersisted>
+               <inputSymbol>string2</inputSymbol>
+               <listDelimiter>,</listDelimiter>
+               <value>SERVER</value>
+               <record>false</record>
+            </staticBinding>
+         </bindings>
+         <transitions>
+            <transition id="9a023787-695c-42a7-a7a9-0192e334a7c0">
+               <annotation/>
+               <name>true</name>
+               <command>NEXT</command>
+               <linkMode>false</linkMode>
+               <responseSymbol>true</responseSymbol>
+               <shouldHandoff>false</shouldHandoff>
+               <transitionValue>0.0</transitionValue>
+               <destination>
+                  <refId>eb5fd30c-7884-44b6-99ce-db8616efc8fe</refId>
+               </destination>
+               <source>
+                  <refId>4d29fedf-7783-4e27-aaf8-1ba8b0feba5a</refId>
+               </source>
+               <positions>
+                  <point>
+                     <x>220.5</x>
+                     <y>278.1666666666667</y>
+                  </point>
+                  <point>
+                     <x>287.0</x>
+                     <y>322.0</y>
+                  </point>
+               </positions>
+               <labelPosition>
+                  <x>628.079037744147</x>
+                  <y>-20.986405852687753</y>
+               </labelPosition>
+            </transition>
+         </transitions>
+         <properties/>
+         <opRef>
+            <refId>7c2f47aa-a4b3-4a7d-b3d4-007f285f7d29</refId>
+         </opRef>
+         <assignments/>
+         <throttleSize>0</throttleSize>
+      </step>
+      <returnStep id="4ce88f46-5059-4e30-8a75-a6b7309bcece">
+         <annotation>There is an exception occured in DMA Deploy Application workflow.</annotation>
+         <name>Error : failure</name>
+         <bounds>
+            <x>571.0</x>
+            <y>16.0</y>
+         </bounds>
+         <layer>-1</layer>
+         <hideInbound>false</hideInbound>
+         <addResultToRunContext>false</addResultToRunContext>
+         <isCriticalStep>false</isCriticalStep>
+         <isNonBlocking>false</isNonBlocking>
+         <isParallelStep>false</isParallelStep>
+         <isSingleResponse>false</isSingleResponse>
+         <recordInHistory>false</recordInHistory>
+         <recordRawOutput>true</recordRawOutput>
+         <recordPrimaryOutput>true</recordPrimaryOutput>
+         <checkPointStep>true</checkPointStep>
+         <historyCheckPointStep>true</historyCheckPointStep>
+         <scriptResultStep>false</scriptResultStep>
+         <bindings/>
+         <transitions>
+            <transition id="96a18e56-af55-4609-90dc-e42388ae48eb">
+               <annotation/>
+               <name>return</name>
+               <command>NEXT</command>
+               <linkMode>false</linkMode>
+               <responseSymbol>failure</responseSymbol>
+               <shouldHandoff>false</shouldHandoff>
+               <transitionValue>0.0</transitionValue>
+               <destination>
+                  <refId>4ce88f46-5059-4e30-8a75-a6b7309bcece</refId>
+               </destination>
+               <source>
+                  <refId>4ce88f46-5059-4e30-8a75-a6b7309bcece</refId>
+               </source>
+               <positions/>
+            </transition>
+         </transitions>
+         <properties/>
+         <returnStepType>ERROR</returnStepType>
+         <assignments/>
+      </returnStep>
+  </steps>
+  <startSteps>5d8b6fab-eeb3-4898-8880-500e36837b66</startSteps>
+</flow>

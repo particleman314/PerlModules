@@ -1,0 +1,564 @@
+package HP::Flare;
+
+################################################################################
+# Copyright (c) 2013 HP.   All rights reserved
+# HP
+# HP IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A 
+# COURTESY TO YOU.   BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+# ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+# STANDARD, HP IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+# IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+# FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+# HP EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+# THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+# ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+# FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+# AND FITNESS FOR A PARTICULAR PURPOSE.
+################################################################################
+
+#=============================================================================
+# Turn on warnings, strict variable management, and diagnostics for errors
+#=============================================================================
+use warnings;
+use strict;
+use diagnostics;
+
+#=============================================================================
+# "Static code" block for this Perl module used by CSL for Flare documentation
+# management.
+#=============================================================================
+BEGIN
+  {
+    use Exporter();
+
+    use FindBin;
+    use lib "$FindBin::Bin/..";
+
+    use vars qw(
+                $VERSION
+                $is_debug
+                $is_init
+
+                $module_require_list
+                $module_request_list
+
+                $broken_install
+
+                @ISA
+                @EXPORT
+               );
+
+    $VERSION     = 1.0;
+
+    @ISA         = qw ( Exporter );
+	#======================================================================
+	# Basic method which can be called from inclusion of this module
+	#======================================================================
+    @EXPORT      = qw (
+					   $add_flare_exception_types
+	                   &add_injection_point
+					   &add_print_stream
+					   &add_scan_log_text
+					   &default_routine
+					   &get_flare_log
+					   &get_injection_point
+					   &get_injection_point_names
+					   &has_injection_point
+					   &initialize_injection_points
+					   &make_flaregroup_module_name
+					   &make_flaregroup_dir
+					   &print_output
+					   &process_injection_point
+					   &scan_log
+					   &transfer_properties
+					   &validate_flare_settings
+					   &validate_requirements
+                      );
+
+	#======================================================================
+	# Required modules (system and HP centric) for accomplishing tasks
+	#======================================================================
+    $module_require_list = {
+							'Cwd'            => undef,
+							'File::Basename' => undef,
+							'MIME::Base64'   => undef,
+							'Tie::IxHash'    => undef,
+							
+ 							'HP::String'        => undef,
+							'HP::RegexLib'      => undef,
+							'HP::BasicTools'    => undef,
+							'HP::Process'       => undef,
+							'HP::ArrayTools'    => undef,
+							'HP::Copy'          => undef,
+							'HP::StreamManager' => undef,
+							'HP::Path'          => undef,
+							'HP::FileManager'   => undef,
+                           };
+						   
+    $module_request_list = {};
+
+    $is_init  = 0;
+    $is_debug = (
+                 $ENV{'debug_hp_flare_pm'} ||
+                 $ENV{'debug_flare_modules'} ||
+                 $ENV{'debug_all_modules'} || 0
+                );
+
+	if ( $is_debug ) { $module_require_list->{'Data::Dumper'} = undef; }
+	
+    $broken_install = 0;
+
+    print STDERR "BEGIN <". __PACKAGE__ .">\n" if ( $is_debug );
+
+    eval "use HP::ModuleLoader;";
+    if ( $@ ) {
+       print STDERR "\t--> Could not find Module::Load::Conditional.  Using fallback for ". __PACKAGE__ ."!\n" if ( $is_debug );
+       $broken_install = 1;
+    }
+
+    $module_require_list->{'Data::Dumper'} = undef if ( $is_debug );
+
+    if ( $broken_install ) {
+       foreach my $usemod (keys(%{$module_require_list})) {
+          if ( defined($module_require_list->{$usemod}) ) {
+             print STDERR "\t--> REQUIRED [". __PACKAGE__ ."]:: use $usemod $module_require_list->{$usemod};\n" if ( $is_debug );
+             eval "use $usemod $module_require_list->{$usemod};";
+          } else {
+             print STDERR "\t--> REQUIRED [". __PACKAGE__ ."]:: use $usemod;\n" if ( $is_debug ); 
+             eval "use $usemod;";
+          }
+          if ( $@ ) {
+             print STDERR "\t--> Cannot find PERL Module << $usemod >>! Please have this installed or accessible!\n";
+             die "Exiting!\n$@";
+          }
+       }
+    } else {
+       my $use_cmd = &load_required_modules( __PACKAGE__, $module_require_list);
+       eval "$use_cmd";
+    }
+
+    if ( $broken_install ) {
+       foreach my $usemod (keys(%{$module_request_list})) {
+         if ( defined($module_request_list->{$usemod}) ) {
+            print STDERR "\t--> REQUESTED [". __PACKAGE__ ."]:: use $usemod $module_request_list->{$usemod};\n" if ( $is_debug );
+            eval "use $usemod $module_request_list->{$usemod};";
+         } else {
+            print STDERR "\t--> REQUESTED [". __PACKAGE__ ."]:: use $usemod;\n" if ( $is_debug );
+            eval "use $usemod;";
+         }
+         if ( $@ ) {
+            print STDERR "\t--> Cannot find PERL Module << $usemod >>! Please have this installed or accessible!\n";
+         }
+       }
+    } else {
+       my $use_cmd = &load_required_modules( __PACKAGE__, $module_request_list);
+       eval "$use_cmd";
+    }
+
+    # Print a message stating this module has been loaded.
+    print STDERR "LOADING <".__PACKAGE__."> Module\n" if ( $is_debug );
+  }
+
+#=============================================================================
+END
+  {
+     print STDERR "UNLOADING <".__PACKAGE__."> Module\n" if ( $is_debug );
+  }
+
+#=============================================================================
+# Some constants used for output management
+#=============================================================================
+use constant DEBUG   => 'DEBUG';
+use constant FAILURE => 'FAILURE';
+use constant WARNING => 'WARNING';
+
+# Specific injection points.  Using tie and IxHash preserves order of insertion
+my %injection_pts;
+tie( %injection_pts, 'Tie::IxHash');
+
+my @scannable_items = ();
+my @registered_streams = ();
+
+#=============================================================================
+sub __find_latest_log($)
+  {
+     my $cloref = shift;
+	 my $madbuildlogdir = &join_path("$cloref->{'flaredir'}", "$cloref->{'projectdir'}", 'Project', 'Reports');
+	 
+	 if ( &does_directory_exist("$madbuildlogdir") ) {
+	    my $flarelog = &get_flare_log("\"$madbuildlogdir\"");
+		return $flarelog;
+	 }
+	 return undef;
+  }
+
+#=============================================================================
+sub __initialize()
+  {
+     if ( not $is_init ) {
+        $is_init = 1;
+        print STDERR "INITIALIZED <".__PACKAGE__."> Module\n" if ( $is_debug );
+     }
+  }
+
+#=============================================================================
+sub add_flare_exception_types()
+  {
+    &add_exception_ids(
+						'NO_FLARE_PATH',
+						'NO_MADBUILD_EXECUTABLE',
+						'NO_FLAREGROUP_SET',
+						'NO_FLAREGROUP_PERL_MODULE',
+						'BAD_FLAREGROUP_PERL_MODULE',
+						'BAD_FLARE_VERSION',
+						'NO_FLARE_PROJECTFILE',
+						'NO_FLARE_BATCHFILE',
+						'BAD_INJECTION_POINT_RETURN',
+					  );
+  }
+
+#=============================================================================
+sub add_injection_point($$)
+  {
+      my $impl_name = shift;
+	  my $impl_routinename = shift;
+	  
+	  if ( ! defined($impl_name) || ! defined($impl_routinename) ) { return; }
+	  $injection_pts{"$impl_name"} = "$impl_routinename";  
+  }
+
+#=============================================================================
+sub add_scan_log_text($)
+  {
+     my $scantext = shift;
+	 if ( ! defined($scantext) ) { return; }
+	 push(@scannable_items, "$scantext");
+  }
+
+#=============================================================================
+sub add_print_stream($)
+  {
+     my $fileptr = shift;
+	 return if ( ! defined($fileptr) );
+	 
+     if ( ref($fileptr) =~ m/array/i ) {
+	    push(@registered_streams, @{$fileptr});
+     } else {
+	    my $handle = &open_stream($fileptr, 'w', 'MADCAPFLARE');
+		&print_2_stream("Adding this file handle to output printing...",'MADCAPFLARE');
+		if ( defined($handle) ) {
+	       push(@registered_streams, 'MADCAPFLARE');
+		} else {
+		   print STDOUT "[WARNING] Unable to allocate file : $fileptr\n";
+		}
+	 }
+  }
+		
+#=============================================================================
+sub default_routine($$)
+  {
+	 #======================================================================
+	 # default routine for missing injection point
+	 #======================================================================
+     my $cloref       = shift;
+	 my $stub_routine = shift;
+	 
+	 my $deferror = 0;
+	 
+ 	 &print_output("Beginning 'HP::Flare::default_routine [ $stub_routine ]' function", DEBUG) if ( $is_debug );
+	 
+	 &print_output("Ending 'HP::Flare::default_routine [ $stub_routine ]' function", DEBUG) if ( $is_debug );
+	 
+	 return $deferror;
+  }
+  
+#=============================================================================
+sub get_flare_log($)
+  {
+     my $searchdir = shift;
+
+	 my @files = glob("$searchdir/*");
+	 
+	 if ( scalar(@files) > 0 ) { return $files[-1]; }
+	 return undef;
+  }
+  
+#=============================================================================
+sub get_injection_point($)
+  {
+     my $impl_name = shift;
+	 
+	 if ( defined($impl_name) ) {
+	    return $injection_pts{"$impl_name"};
+	 }
+	 return undef;
+  }
+
+#=============================================================================
+sub get_injection_point_names()
+  {
+     my @injptr_names = keys(%injection_pts);
+	 return \@injptr_names;
+  }
+  
+#=============================================================================
+sub has_injection_point($)
+  {
+     my $impl_name = shift;
+	 
+	 if ( defined($impl_name) ) {
+	    if ( defined($injection_pts{"$impl_name"}) ) { return 1; }
+	 }
+	 return 0;
+  }
+
+#=============================================================================
+sub initialize_injection_points($)
+  {
+     my $cloref = shift;
+	 return 0 if ( ! defined($cloref) );
+	 
+     my $group_specific_dir = &make_flaregroup_dir($cloref);
+	 	 
+ 	 #======================================================================
+	 # Attempt to load specific group PERL module.
+	 #======================================================================
+	 my $module = &join_path("$group_specific_dir", 'perl', &make_flaregroup_module_name($cloref).".pm");
+	 if ( &does_file_exist("$module") ) {
+	    my $gpdir = &HP::Path::__flip_slashes(&join_path("$group_specific_dir", 'perl'), 'backward', 'forward');
+	    eval "use lib \"$gpdir\";"; # Add the path for module search
+		my $flaremodule = &make_flaregroup_module_name($cloref);
+	    eval "use $flaremodule;";  # Add the module specific to flare group
+
+	    if ( $@ ) {
+	       &print_output("Unable to load PERL module file <$module> for group $cloref->{'flaregroup'}.", FAILURE);
+	       &print_output("Exiting...", FAILURE);
+		   &print_output("Error condition encountered --> $@", DEBUG) if ( $is_debug );
+	       return 0;
+	    }
+	 }
+	 return 1;
+  }
+
+#=============================================================================
+sub make_flaregroup_module_name($;$$)
+  {
+     my $cloref      = shift;
+	 my $exitroutine = shift;
+	 my $exitresult  = shift;
+	 
+	 if ( ! defined($exitroutine) ) {
+	    $exitroutine = \&generate_exception;
+		$exitresult  = 255;
+	 } else {
+	    if ( ! defined($exitresult) ) {
+	       $exitresult = 'NO_FLAREGROUP_PERL_MODULE';
+		}
+	 }
+	 
+	 if ( defined($cloref) ) {
+        if ( defined($cloref->{'flaregroup'}) ) {
+	       return &uppercase_all("$cloref->{'flaregroup'}")."_Flare";
+	    }
+	 }
+	 
+	 &print_output("Unable to determine name for Perl Module because FLAREGROUP not defined", FAILURE);
+	 &{$exitroutine}($exitresult);
+  }
+ 
+#=============================================================================
+sub make_flaregroup_dir($;$$)
+  {
+     my $cloref      = shift;
+	 my $exitroutine = shift;
+     my $exitresult  = shift;
+	 
+	 if ( ! defined($exitroutine) ) {
+	    $exitroutine = \&generate_exception;
+		$exitresult  = 255;
+	 } else {
+	    if ( ! defined($exitresult) ) {
+	       $exitresult = 'NO_GROUPDIR';
+		}
+	 }
+
+     if ( defined($cloref->{'groupdir'}) ) {
+        if ( defined($cloref->{'flaregroup'}) ) {
+           my $groupspecdir = &join_path("$cloref->{'groupdir'}", "$cloref->{'flaregroup'}");
+		   return "$groupspecdir";
+		} else {
+		   &print_output("No FLAREGROUP defined, using 'DEFAULT' as placeholder", WARNING);
+           my $groupspecdir = &join_path("$cloref->{'groupdir'}", 'DEFAULT');
+		   return "$groupspecdir";
+		}
+	 } else {
+	    &print_output("Cannot determine path to group directories.  Exiting!", FAILURE);
+		&{$exitroutine}($exitresult);
+	 }
+  }
+
+#=============================================================================
+sub print_output($;$)
+  {
+    my $msg    = shift;
+    my $header = shift || 'INFO';
+
+    return if ( not defined($msg) );
+    return if ( length($msg) < 1 );
+
+	my $fullmsg = "[$header] $msg\n";
+    print STDOUT "$fullmsg";  
+	if ( scalar(@_) ) {
+	   &print_2_stream("$fullmsg", @_);
+	}
+	
+	if ( scalar(@registered_streams) ) {
+	   &print_2_stream("$fullmsg", @registered_streams);
+	}
+  }
+
+#=============================================================================
+sub process_injection_point($$@)
+  {
+     my $injptr    = shift;
+	 my $cloref    = shift;
+	 
+     my $errcondition = 0;
+	 my $is_default   = 0;
+	 
+	 if ( ! defined($injptr) ) { return 1; }
+	 if ( ! defined($cloref) ) { return 2; }
+
+	 my $routine_name = undef;
+	 
+	 if ( ! &has_injection_point($injptr) ) { 
+	    $routine_name = 'default_routine';
+		$is_default = 1;
+	 } else {
+	    $routine_name = &get_injection_point($injptr);
+	    $routine_name = &lowercase_all("$cloref->{'flaregroup'}")."_$injptr";
+     }
+	 
+	 &print_output("Processing $routine_name");
+	 my $module = &make_flaregroup_module_name($cloref);
+	 if ( &function_exists($module, "$routine_name") ) {
+		my $routine = \&{$routine_name};
+		
+		no strict 'refs';
+	    if ( ! $is_default ) {
+	       $errcondition = &{$routine}($cloref, @_);
+		} else {
+	       $errcondition = &{$routine}($cloref, $injptr);
+		}
+		use strict 'refs';
+     } else {
+	    $errcondition = 255;
+	 }
+	 
+	 if ( $errcondition != 0 ) {
+        &print_output("Injection point <$injptr> failed using routine $routine_name.", FAILURE);
+		return 255;
+	 }
+  }
+  
+#=============================================================================
+sub scan_log($;$)
+  {
+     my $cloref   = shift;
+	 if ( ! defined($cloref) ) { return 0; }
+	 
+     my $flarelog = shift || &__find_latest_log($cloref);
+	 
+	 if ( defined($flarelog) ) {
+		&print_output("Flare Log --> $flarelog", DEBUG ) if ( $is_debug );
+
+	    my $tmpxmlfile = &join_path(&get_temp_dir(), "xml.log");
+		&print_output("XML redirection --> $tmpxmlfile", DEBUG ) if ( $is_debug );
+
+		my $xmlexe = &which('xml', "$FindBin::Bin");
+		if ( ! defined($xmlexe) ) { return 0; }
+		
+		&print_output("XML executable --> $xmlexe", DEBUG ) if ( $is_debug );
+		
+		foreach my $s ( @scannable_items ) {
+		   &print_output("Scanning MadCapFlare logfile for string '$s'");
+		   my $founderrors = qx($xmlexe sel -t -v \"count($s)\" \"$flarelog\");
+		   $founderrors = &chomp_r($founderrors);
+		   &delete_file("$tmpxmlfile") if ( &does_file_exist("$tmpxmlfile") );
+		   if ( defined($founderrors) && $founderrors != 0 ) { &print_output("Found $founderrors matching errors!", FAILURE); return $founderrors; }
+		}
+     }
+	 
+	 &print_output("No errors found in scan of Flare logfile <".File::Basename::basename($flarelog).">");
+	 return 0;
+  }
+
+#=============================================================================
+sub validate_flare_settings($;$$)
+  {
+     my $cloref      = shift;
+	 my $exitroutine = shift;
+     my $exitresult  = shift;
+	 
+	 if ( ! defined($exitroutine) ) {
+	    $exitroutine = \&generate_exception();
+		$exitresult  = 255;
+	 } else {
+	    if ( ! defined($exitresult) ) {
+	       $exitresult = 'NO_FLARE_PATH';
+		}
+	 }
+	 
+	 if ( ! defined($cloref) ) { return 0; }
+	 
+	 if ( ! defined($cloref->{'flarepath'}) ) {
+	    &print_output("Could not find definition of FLAREPATH in environment or from commandline...", FAILURE);
+		&{$exitroutine}($exitresult);
+	 }
+	 
+	 if ( ! defined($cloref->{'flaregroup'}) ) {
+	    if ( defined($ENV{'FLAREGROUP'}) ) { $cloref->{'flaregroup'} = $ENV{'FLAREGROUP'}; }
+		if ( ! defined($cloref->{'flaregroup'}) ) { &{$exitroutine}('NO_FLAREGROUP_SET'); }
+		$cloref->{'flaregroup'} = &uppercase_all($cloref->{'flaregroup'});
+	 }
+	 
+	 if ( ! defined($cloref->{'flareoptions'}) ) {
+	    if ( defined($ENV{'FLAREOPTIONS'}) ) { $cloref->{'flareoptions'} = $ENV{'FLAREOPTIONS'}; }
+		else { $cloref->{'flareoptions'} = ""; }
+	 }
+
+	 return 1;
+  }
+  
+#=============================================================================
+sub validate_requirements($)
+  {
+     my $cloref      = shift;
+	 my $exitroutine = shift;
+     my $exitresult  = shift;
+	 
+	 if ( ! defined($exitroutine) ) {
+	    $exitroutine = \&generate_exception;
+		$exitresult  = 255;
+	 } else {
+	    if ( ! defined($exitresult) ) {
+	       $exitresult = 'NO_FLARE_PROJECTFILE';
+		}
+	 }
+	 
+	
+	 if ( ! defined($cloref) ) { goto FINSIH_REQ; }
+	 if ( ! defined($cloref->{'projectfile'}) ) {
+	    &print_output("No project file defined.  Unable to continue!", FAILURE);
+	    &{$exitroutine}($exitresult);
+	 }
+	
+  FINISH_REQ:
+	&print_output("Completed validation of requirements for group : $cloref->{'flaregroup'}");
+  }
+
+#=============================================================================
+&__initialize();
+
+#=============================================================================
+1;

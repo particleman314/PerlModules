@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+         <ooengines>
+			<ooengine>
+				<folder path="/Library/CSA Content Pack/CSA3.2/Providers/Infrastructure/Matrix Operating Environment/HP IO Lifecycle/Actions" recursive="true" update="true"/> 
+				<folder path="/Library/CSA Content Pack/CSA3.2/Providers/Infrastructure/Matrix Operating Environment/HP IO Lifecycle/Validation" recursive="true" update="true"/>
+				<folder path="/Library/CSA Content Pack/CSA3.2/Providers/Infrastructure/Matrix Operating Environment/HP IO SOAPv4 Lifecycle/Actions" recursive="true" update="true"/>
+			</ooengine>
+            <ooengine accessPointType="RESOURCE_POOL_SYNC" name="OO-RESOURCE-POOL-SYNC" 
+             uri="https://localhost:8443/PAS/services/WSCentralService" 
+             truststore="C:/Program Files/Hewlett-Packard/CSA/openjre/lib/security/cacerts" 
+             truststorePassword="ENC(q6ctyVrBrqWIp1O7R00q58CrZh8tzPkP)" 
+             username="admin" 
+             password="ENC(0KnPim+0x/CEVeJJMpLnIg==)"> 
+	           <folder path="/Library/CSA Content Pack/CSA3.2/Providers/Infrastructure/Amazon EC2/Resource Pool Sync/Actions" recursive="true" update="true" />
+            </ooengine>
+		 </ooengines>

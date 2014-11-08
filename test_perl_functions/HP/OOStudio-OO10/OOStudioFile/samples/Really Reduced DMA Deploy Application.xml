@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow id="822de58e-49cf-4192-9db9-34f7da0a81d5">
+  <annotation>822de58e-49cf-4192-9db9-34f7da0a81d5.description</annotation>
+  <name>DMA Deploy Application</name>
+  <categories/>
+  <inputs>
+      <userInputBinding id="9792868e-ce8a-47c8-ad5a-dbcd683d4a2b">
+         <annotation/>
+         <assignFromContext>true</assignFromContext>
+         <assignToContext>true</assignToContext>
+         <inputType>STRING</inputType>
+         <isList>false</isList>
+         <required>false</required>
+         <isPersisted>true</isPersisted>
+         <inputSymbol>CSA_PROCESS_ID</inputSymbol>
+         <listDelimiter>,</listDelimiter>
+         <record>false</record>
+         <isMultiSelect>false</isMultiSelect>
+      </userInputBinding>
+      <staticBinding id="28cdc4ad-de35-4fe3-a8e3-2bde86466df5">
+         <annotation/>
+         <assignFromContext>true</assignFromContext>
+         <assignToContext>true</assignToContext>
+         <inputType>STRING</inputType>
+         <isList>false</isList>
+         <required>false</required>
+         <isPersisted>true</isPersisted>
+         <inputSymbol>RSC_PROVIDER_ID</inputSymbol>
+         <listDelimiter>,</listDelimiter>
+         <value>[TOKEN:RSC_PROVIDER_ID]</value>
+         <record>false</record>
+      </staticBinding>
+  </inputs>
+</flow>

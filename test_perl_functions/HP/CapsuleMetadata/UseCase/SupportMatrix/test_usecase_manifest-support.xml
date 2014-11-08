@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<supportMatrix>
+   <provider name="com.hp.csa" displayName="Cloud Service Automation" mandatory="true">
+      <version comparison="equals" value="3.20" />
+      <version comparison="equals" value="4.00" />
+   </provider>
+   <provider name="com.hp.oo" displayName="Operations Orchestration" mandatory="true">
+      <version comparison="equals" value="9.07" />
+      <version comparison="equals" value="10.02" />
+   </provider>
+   <provider name="com.hp.sa" displayName="Server Automation">
+	  <version comparison="equals" value="10.00" />
+   </provider>
+   <provider name="com.hp.dma" displayName="Database and Middleware Automation">
+      <version comparison="equals" value="10.10" />
+   </provider>
+</supportMatrix>

@@ -1,0 +1,33 @@
+<package>
+   <usecase>
+      <name>DMA Application Provider for Provisioning Oracle</name>
+	  <parameters>
+	     <version>2.0.13</version>
+		 <description>My own description should be here</description>
+		 <displayname>HP DMA Oracle Provision</displayname>
+		 <publisher>Verizon</publisher>
+	  </parameters>
+   </usecase>
+   <oo>
+      <name>HP-SA-Audit</name>
+	  <parameters>
+	     <version>2.0.1</version>
+		 <level>2</level>
+	  </parameters>
+   </oo>
+   <oo>
+      <name>VMWare-vCenter</name>
+	  <parameters>
+	     <version>1.0.5</version>
+		 <level>1</level>
+	  </parameters>
+   </oo>
+   <oo>
+      <name>MOE Compute</name>
+	  <parameters>
+	     <version>1.5.6</version>
+		 <level>1</level>
+	  </parameters>
+   </oo>
+   <capsule_name>MyTestCapsule</capsule_name>
+</package>

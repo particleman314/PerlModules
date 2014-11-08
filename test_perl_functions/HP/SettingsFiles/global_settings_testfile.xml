@@ -1,0 +1,221 @@
+<global_data>
+	<provider_list>
+	   <internal>
+		  <providers>
+			 <provider name="HP-Database Middleware Automation Oracle"     nickname="HP-DMA-Oracle"    value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning Oracle"                       workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Database Middleware Automation SQL Server" nickname="HP-DMA-SQL"       value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning SQL Server 2008R2"            workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Database Middleware Automation Weblogic"   nickname="HP-DMA-Weblogic"  value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning Weblogic"                     workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Database Middleware Automation WebSphere"  nickname="HP-DMA-WebSphere" value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning WebSphere Application Server" workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Server Automation Audit Compliance"        nickname="HP-SA-Audit"      value="com.hp.csl.sa"                             usecase="Server Automation Audit Compliance"/>
+			 <provider name="HP-Server Automation Patching Compliance"     nickname="HP-SA-Patch"      value="com.hp.csl.sa"                             usecase="Server Automation Patching Compliance"/>
+			 <provider name="HP-Matrix Operating Environment"              nickname="HP-MOE"           value="com.hp.csl.moe"     sd_pattern="MOE"       usecase="MOE Compute"/>
+			 <provider name="HP-CloudOS"                                                               value="com.hp.csl.cloudos"                        usecase="HP Cloud OS"/>
+			 <provider name="HP-SiteScope"                                                             value="com.hp.csl.ss"                             usecase=""/>
+			 <provider name="HP-Business Service Management"               nickname="HP-BSM"           value="com.hp.csl.bsm"                            usecase="BSM OMi MA"/>
+			 <provider name="HP-Service Manager"                           nickname="HP-SM"            value="com.hp.csl.sm"                             usecase=""/>
+			 <provider name="HP-Asset Manager"                             nickname="HP-AM"            value="com.hp.csl.am"                             usecase=""/>
+			 <provider name="HP-Network Automation"                        nickname="HP-NA"            value="com.hp.csl.na"                             usecase=""/>
+			 <provider name="HP-3PAR"                                                                  value="com.hp.csl.3par"                           usecase=""/>
+		  </providers>
+	   </internal>
+	   <external>
+		  <providers>
+			 <provider name="VMWare-vCenter"                                                           value="com.hp.csl.vmware.vcenter"  sd_pattern="VCENTER"  usecase="vCenter Compute"/>
+			 <provider name="Amazon-EC2"                                                               value="com.hp.csl.amazon.ec2"                            usecase="Amazon EC2"/>
+			 <provider name="OpenStack"                                                                value="com.hp.csl.openstack"                             usecase="OpenStack Compute"/>
+			 <provider name="Microsoft-Azure"                                                          value="com.hp.csl.microsoft.azure"                       usecase="Microsoft Azure"/>
+			 <provider name="F5-BigIP"                                                                 value="com.hp.csl.f5.bigip"                              usecase="F5 BIG-IP LTM Load Balancer"/>
+			 <provider name="NetApp-NepAppStorage"                                                     value="com.hp.csl.netapp.storage"                        usecase=""/>
+		  </providers>
+	   </external>
+	   
+	   <groups>
+          <group>
+	         <support name="VMWare-vCenter" type="single" />
+		     <support name="HP-Matrix Operating Environment" type="single" />
+	      </group>
+       </groups>
+	</provider_list>
+	
+	<support_matrix>
+	   <provider name="com.hp.csa" displayName="Cloud Service Automation" mandatory="true">
+	   <!-- The attribute "mandatory" represents the minimal requirement for the contents to be installed (only install phase). If this attribute is not present, default is false -->
+		  <version comparison="equals" value="3.20" />
+		  <version comparison="equals" value="4.00" />
+		  <version comparison="equals" value="4.10" />
+	   </provider>
+	   <provider name="com.hp.oo" displayName="Operations Orchestration" mandatory="true">
+		  <version comparison="equals" value="9.07" />
+		  <version comparison="equals" value="10.02" />
+		  <version comparison="equals" value="10.10" />
+	   </provider>
+	</support_matrix>
+
+	<build_section>
+	   <concurrency_tag>%RANDOM%</concurrency_tag>
+	   <build>
+	      <selfinstall>0</selfinstall>
+		  <savelog>0</savelog>
+		  <debug>0</debug>
+		  <dryrun>0</dryrun>
+		  <force>0</force>
+		  <allow>
+		     <packaging>0</packaging>
+			 <lrc>0</lrc>
+		  </allow>
+		  <logdir>%TMP%/CSL_BUILD</logdir>
+		  <global>
+		      <logfile>build.{concurrency_tag}.log</logfile>
+		  </global>
+		  <local>
+		      <logfile>build.log</logfile>
+		  </local>
+		  <alldirfile>%TMP%/alldirs{concurrency_tag}.txt</alldirfile>
+	      <tools>
+		     <folder>../../devtools/library</folder>
+		  </tools>
+		  <log>
+		     <scan_field>ERROR</scan_field>
+			 <scan_field>FAILURE</scan_field>
+		  </log>
+		  <singular_build>
+		     <file>build2.bat</file>
+		     <file>package2.bat</file>
+		  </singular_build>
+		  <ignored>
+	         <content>
+	            <name>devtools</name>
+	            <name>Documentation</name>
+				<name>CSL Compliance Tool</name>
+				<name>CSL Support Matrix Maker</name>
+				<name>OOFlows</name>
+		     </content>
+		     <lrc>
+		     </lrc>		  
+		  </ignored>
+	   </build>
+	   
+	   <package>
+	      <release_id>6</release_id>
+		  <code_id>{csl|identifier}</code_id>
+		  <name>Content_Pack_{package|code_id}</name>
+		  <prefix>CSA</prefix>
+		  <productdir>products</productdir>
+		  <releasedir>release</releasedir>
+		  <logdir>%TMP%/CSL_PACK</logdir>
+		  <global>
+		      <logfile>package.{concurrency_tag}.log</logfile>
+		  </global>
+		  <single_install>
+		     <copy_content>
+			    <dirs>
+				   <name>service-designs</name>
+				   <name>tools</name>
+				   <name>compile/target/build/jar</name>
+				</dirs>
+				<files></files>
+			 </copy_content>
+		  </single_install>
+		  <unified>0</unified>
+		  <debug>0</debug>
+		  <is_release>0</is_release>
+		  <allow>
+		     <self_install>0</self_install>
+		  </allow>
+		  <ignored>
+	         <name>ComplianceChecker</name>
+		     <name>ComplianceChecker.zip</name>
+		     <name>CSLInstaller</name>
+		     <name>CSLInstaller.zip</name>
+		     <name>{build|local|logfile}</name>		  
+		  </ignored>
+	   </package>
+		
+	   <merge>
+		  <debug>0</debug>
+		  <logdir>%TMP%/CSL_MERGE</logdir>
+		  <global>
+		      <logfile>merge.{concurrency_tag}.log</logfile>
+		  </global> 
+	   </merge>
+	   
+	   <csl>
+	      <codename>Fossil</codename>
+	      <identifier>CP_{package|release_id}</identifier>
+	      <name>CSL</name>
+		  <maven>
+		     <version>2.2.1</version>
+			 <settings>
+			    <xmlfile>tmp/settings.xml</xmlfile>
+			 </settings>
+		  </maven>
+	   </csl>
+	   
+	   <svn>
+	      <tempfile>.svninfo{concurrency_tag}.txt</tempfile>
+		  <protocol>https</protocol>
+		  <port>18180</port>
+		  <server>csvnfc-pro.fc.hp.com</server>
+		  <repository>
+		     <root>svn/hps-csl</root>
+		  </repository>
+		  <user>cslbuilder</user>
+		  <password>ENC{UTFOTVluVnBiR1JsY2pJd01UUT0=}</password>
+	   </svn>
+	   
+	   <cse>
+	      <version>2.1</version>
+	   </cse>
+	   
+	   <oo associated_product="OO9" >
+	      <content>
+		     <packager>
+			    <version>9.07</version>
+				<path>{build|tools|folder}/oo/ContentPackager/{OO9|oo|content|packager|version}</path>
+			 </packager>
+			 <jarfile>
+			    <prefix>HP-CSA-Solutions</prefix>
+			 </jarfile>
+			 <cpversion>{package|release_id}</cpversion>
+			 <single_installer_file>oo9-csa-solutions-cp-{OO9|oo|content|cpversion}.jar</single_installer_file>
+			 <requirements_file>requirements_{packaging|code_id}.xml</requirements_file>
+			 <enablement_file>enable_{packaging|code_id}.xml</enablement_file>
+		  </content>
+		  <library>
+		     <top>/Library/{csl|name}</top>
+		  </library>
+	   </oo>
+	   <oo associated_product="OO10" >
+	      <content>
+		  	 <jarfile>
+			    <prefix>oo10-csa</prefix>
+			 </jarfile>
+			 <cpversion>{package|release_id}.0.0</cpversion>
+			 <single_installer_file>oo10-csa-solutions-cp-{OO10|oo|content|cpversion}.jar</single_installer_file>			 
+          </content>
+       </oo>
+	</build_section>
+	
+	<installer_section>
+	   <srcdir>CSL Installer Tool</srcdir>
+	</installer_section>
+	
+	<test_section>
+	   <scm>svn</scm>
+	   <repository>
+	      <path>test/CSL/branches/CSL Build Artifacts</path>
+       </repository>
+	</test_section>
+	
+	<global_dependency>
+	   <ooflow tag="OO10">
+	      <artifact type="OOTB" value="Base" path="local" version="1.1.1"/>
+	      <artifact type="OOTB" value="Cloud" path="local" version="1.1.0"/>
+	      <artifact type="OOTB" value="HP Solutions" path="local" version="1.1.2"/>
+	      <artifact type="OOTB" value="Virtualization" path="local" version="1.1.0"/>
+	      <artifact type="OOTB" value="SA" path="local" version="1.1.0-SNAPSHOT"/>
+	      <artifact type="OOTB" value="SM" path="local" version="1.0.1"/>
+	      <artifact type="OOTB" value="CSA"  path="local" version="4.10.0000"/>
+	   </ooflow>
+	</global_dependency>
+</global_data>

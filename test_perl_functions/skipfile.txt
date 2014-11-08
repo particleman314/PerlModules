@@ -1,0 +1,10 @@
+D: HP/Repos                    # Still a work in progress
+D: HP/Sandbox                  # Still a work in progress
+F: HP/Copy/copy_with_retry_and_exclusions
+D: HP/BinaryOperators
+D: HP/Build
+#D: HP/Flare
+D: HP/FindSrcRoot
+F: HP/Drive/DriveMapping/request_reduced_path
+D: HP/ZipObject
+D: HP/OOStudio-OO9

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root version="14" libraryDocVersion="17">
+  <node type="returnOp" id="86c33fac-7b62-49f5-bf0b-1011e90ca258">
+    <attribute name="annotation"></attribute>
+    <attribute name="categories">
+      <collection type="set"/>
+    </attribute>
+    <attribute name="defaultContent">true</attribute>
+    <attribute name="dharmaParentUuid">b2a767c9-dac7-4148-8073-44d47d12f09f</attribute>
+    <attribute name="dharmaVersion">
+      <node type="version">
+        <attribute name="derivation">|34b40fdc-c17d-4592-9866-ad620302258a#21.0</attribute>
+        <child name="revisions">
+          <collection ordered="true" type="list">
+            <node type="revision">
+              <attribute name="checkoutModificationNum">0</attribute>
+              <attribute name="commitUuid">99f3f2b2-0fff-4851-a640-2140a0d8556c</attribute>
+              <attribute name="modificationNum">21</attribute>
+              <attribute name="respositoryId">34b40fdc-c17d-4592-9866-ad620302258a</attribute>
+            </node>
+          </collection>
+        </child>
+      </node>
+    </attribute>
+    <attribute name="fieldValues">
+      <map>
+        <map-entry key="Return Code">
+          <value type="INT">3</value>
+        </map-entry>
+      </map>
+    </attribute>
+    <attribute name="hidden">false</attribute>
+    <attribute name="last_modified_by">admin</attribute>
+    <attribute name="modifiedTimestamp">1274133989855</attribute>
+    <attribute name="name">Error</attribute>
+    <attribute name="uuid">86c33fac-7b62-49f5-bf0b-1011e90ca258</attribute>
+    <attribute name="version">0</attribute>
+    <child name="accessControlList">
+      <collection type="list">
+        <node type="groupPermissions" id="779e07f3-5fbf-4471-8bbe-e3f70dd33118">
+          <attribute name="last_modified_by">admin</attribute>
+          <attribute name="modifiedTimestamp">1380556310311</attribute>
+          <attribute name="perm">15</attribute>
+          <attribute name="uuid">779e07f3-5fbf-4471-8bbe-e3f70dd33118</attribute>
+          <child name="role">
+            <ref pathref="8924098d-92bb-4823-8ef9-756623917ce1"/>
+          </child>
+        </node>
+      </collection>
+    </child>
+    <child name="availableResultExpressions">
+      <collection type="list"/>
+    </child>
+    <child name="iconSpec">
+      <node type="icon-spec" id="4e423714-9a96-4c5d-95ae-9c0d72b92b18">
+        <attribute name="base-icon">return_failure.png</attribute>
+        <attribute name="base-path">System</attribute>
+        <attribute name="last_modified_by">admin</attribute>
+        <attribute name="layers">
+          <collection type="list"/>
+        </attribute>
+        <attribute name="modifiedTimestamp">1158855956122</attribute>
+        <attribute name="read-only">true</attribute>
+        <attribute name="uuid">4e423714-9a96-4c5d-95ae-9c0d72b92b18</attribute>
+      </node>
+    </child>
+    <child name="inputs">
+      <collection type="list"/>
+    </child>
+    <child name="possibleResponses">
+      <collection type="list"/>
+    </child>
+  </node>
+</root>

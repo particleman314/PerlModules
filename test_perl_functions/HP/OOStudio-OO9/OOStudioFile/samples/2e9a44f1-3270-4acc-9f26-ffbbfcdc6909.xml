@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root version="14" libraryDocVersion="17">
+  <node type="systemProperty" id="2e9a44f1-3270-4acc-9f26-ffbbfcdc6909">
+    <attribute name="annotation">This property needs to be set to TRUE (case insensitive) if the Custom Hostname generation logic needs to be integrated with the IPAM solution and the hostname will have the last octet of the IP address in it. If set to FALSE, there is no integration.</attribute>
+    <attribute name="defaultContent">false</attribute>
+    <attribute name="dharmaParentUuid">59341366-05aa-4339-a79e-6c158bb1fdd8</attribute>
+    <attribute name="dharmaVersion">
+      <node type="version">
+        <attribute name="derivation">|edf80b7f-e5c1-47ef-a694-eac06a3a9f75#1.0|14f1077c-927d-4e33-9eac-77564aad1c38#7.0|c85688ff-891f-43bb-ad9b-8d6f7dc2ab82#8.0</attribute>
+        <child name="revisions">
+          <collection ordered="true" type="list">
+            <node type="revision">
+              <attribute name="checkoutModificationNum">0</attribute>
+              <attribute name="commitUuid">47e7700a-a12a-4571-95fe-92a3f23268ed</attribute>
+              <attribute name="modificationNum">8</attribute>
+              <attribute name="respositoryId">c85688ff-891f-43bb-ad9b-8d6f7dc2ab82</attribute>
+            </node>
+          </collection>
+        </child>
+      </node>
+    </attribute>
+    <attribute name="last_modified_by">admin</attribute>
+    <attribute name="modifiedTimestamp">1376656931851</attribute>
+    <attribute name="name">CSA_Hostname_IPAM_Integration</attribute>
+    <attribute name="uuid">2e9a44f1-3270-4acc-9f26-ffbbfcdc6909</attribute>
+    <attribute name="value">G7NXyupap14LByYNMSArZlZT+Jst0yDDh9dO9CXSlxGnFn9GL2mGHfrKu5VAlOW0</attribute>
+  </node>
+</root>

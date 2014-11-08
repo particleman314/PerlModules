@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<providerCapsule>
+	<installerData>
+		<name>com.hp.csl.moe</name>
+		<description>To be filled in</description>
+        <displayName/>
+		<publisher>hp.csl</publisher>
+		<ootag>OO10</ootag>
+		<version>
+			<major>5</major>
+			<minor>00</minor>
+			<revision/>
+			<subrevision/>
+		</version>
+		<ooengines>
+			<ooengine>
+				<folder path="/Library/CSA Content Pack/CSA3.2/Providers/Infrastructure/Matrix Operating Environment/HP IO Lifecycle/Actions" recursive="true" update="true"/> 
+				<folder path="/Library/CSA Content Pack/CSA3.2/Providers/Infrastructure/Matrix Operating Environment/HP IO Lifecycle/Validation" recursive="true" update="true"/>
+				<folder path="/Library/CSA Content Pack/CSA3.2/Providers/Infrastructure/Matrix Operating Environment/HP IO SOAPv4 Lifecycle/Actions" recursive="true" update="true"/>
+			</ooengine> 
+		</ooengines>
+	</installerData>
+</providerCapsule>

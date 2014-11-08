@@ -1,0 +1,37 @@
+	<provider_list>
+	   <internal>
+		  <providers>
+			 <provider name="HP-Database Middleware Automation Oracle"     nickname="HP-DMA-Oracle"    value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning Oracle"                       workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Database Middleware Automation SQL Server" nickname="HP-DMA-SQL"       value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning SQL Server 2008R2"            workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Database Middleware Automation Weblogic"   nickname="HP-DMA-Weblogic"  value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning Weblogic"                     workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Database Middleware Automation WebSphere"  nickname="HP-DMA-WebSphere" value="com.hp.csl.dma"                            usecase="DMA Application Provider for Provisioning WebSphere Application Server" workflow="DMA Application Provider WorkFlows"/>
+			 <provider name="HP-Server Automation Audit Compliance"        nickname="HP-SA-Audit"      value="com.hp.csl.sa"                             usecase="Server Automation Audit Compliance"/>
+			 <provider name="HP-Server Automation Patching Compliance"     nickname="HP-SA-Patch"      value="com.hp.csl.sa"                             usecase="Server Automation Patching Compliance"/>
+			 <provider name="HP-Matrix Operating Environment"              nickname="HP-MOE"           value="com.hp.csl.moe"     sd_pattern="MOE"       usecase="MOE Compute"/>
+			 <provider name="HP-CloudOS"                                                               value="com.hp.csl.cloudos"                        usecase="HP Cloud OS"/>
+			 <provider name="HP-SiteScope"                                                             value="com.hp.csl.ss"                             usecase=""/>
+			 <provider name="HP-Business Service Management"               nickname="HP-BSM"           value="com.hp.csl.bsm"                            usecase="BSM OMi MA"/>
+			 <provider name="HP-Service Manager"                           nickname="HP-SM"            value="com.hp.csl.sm"                             usecase=""/>
+			 <provider name="HP-Asset Manager"                             nickname="HP-AM"            value="com.hp.csl.am"                             usecase=""/>
+			 <provider name="HP-Network Automation"                        nickname="HP-NA"            value="com.hp.csl.na"                             usecase=""/>
+			 <provider name="HP-3PAR"                                                                  value="com.hp.csl.3par"                           usecase=""/>
+		  </providers>
+	   </internal>
+	   <external>
+		  <providers>
+			 <provider name="VMWare-vCenter"                                                           value="com.hp.csl.vmware.vcenter"  sd_pattern="VCENTER"  usecase="vCenter Compute"/>
+			 <provider name="Amazon-EC2"                                                               value="com.hp.csl.amazon.ec2"                            usecase="Amazon EC2"/>
+			 <provider name="OpenStack"                                                                value="com.hp.csl.openstack"                             usecase="OpenStack Compute"/>
+			 <provider name="Microsoft-Azure"                                                          value="com.hp.csl.microsoft.azure"                       usecase="Microsoft Azure"/>
+			 <provider name="F5-BigIP"                                                                 value="com.hp.csl.f5.bigip"                              usecase="F5 BIG-IP LTM Load Balancer"/>
+			 <provider name="NetApp-NepAppStorage"                                                     value="com.hp.csl.netapp.storage"                        usecase=""/>
+		  </providers>
+	   </external>
+	   
+	   <groups>
+          <group>
+	         <support name="VMWare-vCenter" type="single" />
+		     <support name="HP-Matrix Operating Environment" type="single" />
+	      </group>
+       </groups>
+	</provider_list>

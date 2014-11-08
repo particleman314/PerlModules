@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<capsulePack>
+	<bom count="5">
+		<file>
+			<name>CP_4_01-DMA_Application_Provider_for_Provisioning_Oracle.zip</name>
+			<md5sum>9d9bda85cf9a4c7aa60415d1c10b0682</md5sum>
+			<version>5.0</version>
+			<tag>CP_5</tag>
+		</file>
+		<file>
+			<name>com.hp.csl.vmware.vcenter.jar</name>
+			<md5sum>cc0885e662b8304398cba4a9520b48f4</md5sum>
+			<version>5.0</version>
+			<tag>CP_5</tag>
+		</file>
+		<file>
+			<name>com.hp.csl.moe.jar</name>
+			<md5sum>2203a3e6311e44779e414705e941d8ba</md5sum>
+			<version>5.0</version>
+			<tag>CP_5</tag>
+		</file>
+		<file>
+			<name>com.hp.csl.sa.jar</name>
+			<md5sum>a213a9211e08f32aaf7a6fa3758d5ed6</md5sum>
+			<version>5.0</version>
+			<tag>CP_5</tag>
+		</file>
+		<file>
+			<name>com.hp.csl.dma.jar</name>
+			<md5sum>112e1e8b6668a1b0bb3db59189a4047b</md5sum>
+			<version>5.0</version>
+			<tag>CP_5</tag>
+		</file>
+	</bom>
+	<buildinfo>
+		<svnrevision>4444</svnrevision>
+		<buildnumber>1</buildnumber>
+		<builddate>today</builddate>
+	</buildinfo>
+	<ootb>
+      <artifact />
+	</ootb>
+</capsulePack>
